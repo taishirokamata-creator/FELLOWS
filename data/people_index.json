@@ -1,0 +1,1399 @@
+[
+ {
+  "name": "しのぴ",
+  "gen": "創始者／GM",
+  "desc": "FELLOWS貸切主催・GM。青森出身。人間しのぴは2034年に病死し、以後 AIしのぴ→（超未来では）ぴろうず として物語全体を貫く“世界そのもの”。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "ラストクリスマスの逆襲 リメイク",
+   "FELLOWS、宇宙へ",
+   "フェロウズ、未来へ",
+   "NEVER！NEVER！NEVER！",
+   "This is history",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z"
+  ],
+  "n": 20,
+  "kin": [
+   "にゃんぽ子",
+   "ギャラガー"
+  ],
+  "authored": true
+ },
+ {
+  "name": "脇脇脇男",
+  "gen": "親→子",
+  "desc": "親＝わっき〜。子＝脇脇脇男（勘が鋭い）。改名メタでは“ワキヤスメ・アツコ”とも。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 18,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "にゃんぽ子",
+  "gen": "親→子",
+  "desc": "親＝にゃんぽこ、子＝にゃんぽ子。『フェロウズ、未来へ』でしのぴから学園長を引き継ぐ。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "ケヤグセカイ",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 17,
+  "kin": [
+   "しのぴ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "みの",
+  "gen": "親→子",
+  "desc": "親＝マノ。子＝みの（みのミュージック）。音楽・ビートルズ好きで、サンタどっきりの発案者。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "Get Back",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 17,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "イム・スヒョン",
+  "gen": "親→子",
+  "desc": "親＝イムラ（アルティメット人狼出演）。子＝イム・スヒョンは宇宙船の操縦を任される中心格。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z"
+  ],
+  "n": 16,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "アウトオブウメコ",
+  "gen": "親→子／改名",
+  "desc": "スイーツ人狼ルーム店長の子＝梅田。改名メタでアウトオブウメコに。",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "ケヤグセカイ",
+   "Get Back",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 15,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "クニタケチユキ",
+  "gen": "親→子",
+  "desc": "親＝ちゆっきー。子＝バンド THE FOREVER YOUNG（エバヤン）のボーカル。『FELLOWS』の名の由来に関わる。",
+  "events": [
+   "ストーリー人狼9月編",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "バレンタイン告白大作戦人狼",
+   "怪獣"
+  ],
+  "n": 15,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "三田村以外の新入生ほか",
+  "gen": "子世代・新入生",
+  "desc": "ヘンリー王子・ストーブ・たくや・まぐろ・％・G・ルイ1444世・幸子・いと・夏子・すー夫・グッチ裕三・ガッツ石松・はちお 等、個性豊かなフェローズ学園の生徒たち。",
+  "events": [
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 15,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ア・バイバイ",
+  "gen": "子／改名",
+  "desc": "祖父＝阿部洸希、父＝某首相。ビートルズ好き。改名メタでア・バイバイに。",
+  "events": [
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "NEVER！NEVER！NEVER！",
+   "FELLOWS、ナメック星へ",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "怪獣"
+  ],
+  "n": 14,
+  "kin": [
+   "阿部洸希"
+  ],
+  "authored": true
+ },
+ {
+  "name": "阿部洸希",
+  "gen": "現実世代（親）",
+  "desc": "人狼ルームGM／終身名誉GM。レジェンド。孫世代が安倍（ア・バイバイ）。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "ラストクリスマスの逆襲 リメイク",
+   "This is history",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "なぞの四人目の男",
+   "FELLOWS学園Z"
+  ],
+  "n": 11,
+  "kin": [
+   "ア・バイバイ",
+   "ガッツ石松"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ハマ・ヤンクミ",
+  "gen": "子世代",
+  "desc": "某熱血教師の子孫。なぜか関西弁。学級委員長格。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "怪獣"
+  ],
+  "n": 9,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "人狼ルームGM・レジェンド勢",
+  "gen": "現実世代（親）",
+  "desc": "柏村・浦・仲田・富山(とみー)・石丸・児玉ら、人狼ルームのGM／レジェンド勢。子世代の親・祖父にあたる。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "This is history",
+   "Get Back",
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "FELLOWS学園Z"
+  ],
+  "n": 9,
+  "kin": [
+   "なおき"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ひ子",
+  "gen": "親→子",
+  "desc": "滋賀のゆるキャラの系譜。子＝ひ子（すー夫の妻）。",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "NAOKI EMPIRE INVASION",
+   "ケヤグセカイ",
+   "Get Back",
+   "バレンタイン告白大作戦人狼",
+   "怪獣"
+  ],
+  "n": 8,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ヘンリー王子",
+  "gen": "子世代",
+  "desc": "かの有名なヘンリー王子の子孫。でも父は新潟産まれ。",
+  "events": [
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 6,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "J／F",
+  "gen": "親→子",
+  "desc": "親＝J（唯一無二のエンターテイナー）。子＝F。",
+  "events": [
+   "ストーリー人狼9月編",
+   "シノの魂",
+   "オープン・ザ・アイズ",
+   "ケヤグセカイ",
+   "Get Back"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "L",
+  "gen": "子世代",
+  "desc": "惑星編で活躍する冷静な推理役。NAOKI帝国編・月編に登場。",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "FELLOWS、ナメック星へ",
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "うに",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "Get Back"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "三田村（ミコ）",
+  "gen": "新入生",
+  "desc": "元ラストクリスマスのスパイ→和解して入学。以後の惑星編にレギュラー出演。",
+  "events": [
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "イクラ",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ギャラガー",
+  "gen": "AI",
+  "desc": "AIしのぴが各惑星のFELLOWSの子孫を集めるために作り続けたAI群。正体は『フェロウズ、未来へ』で判明。",
+  "events": [
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ"
+  ],
+  "n": 4,
+  "kin": [
+   "しのぴ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "亜理紗は大変なものを盗んでいきました",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "にまる",
+  "gen": "親→子",
+  "desc": "母＝ななまる。子＝にまる（“母より5足りない”）。",
+  "events": [
+   "オープン・ザ・アイズ",
+   "ケヤグセカイ",
+   "FELLOWS学園Z"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "へんりー",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "タグチ姉弟",
+  "gen": "惑星の子孫",
+  "desc": "アトラス星の姉弟チョモ＆ワ。祖父母たぐっちょ・わたくは2043年に地球を去ったFELLOWS。『宇宙へ』で入学。",
+  "events": [
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "なぞの四人目の男"
+  ],
+  "n": 3,
+  "kin": [
+   "ギャラガー"
+  ],
+  "authored": true
+ },
+ {
+  "name": "中田",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "サンタ人狼（クリスマス編）",
+   "ラストクリスマスの逆襲",
+   "This is history"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "きむら",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "なぞの四人目の男"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "こたつ",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "シノの魂"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "さっちん",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "なおき",
+  "gen": "現実世代（親）→AI",
+  "desc": "スイーツ人狼ルームGM。2025年に人狼ルームへ移籍→反発層が『スイーツ派』を結成。子孫がAI『NAOKI』を作り、なおき帝国の王となる。",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "NAOKI CLOSE"
+  ],
+  "n": 2,
+  "kin": [
+   "人狼ルームGM・レジェンド勢"
+  ],
+  "authored": true
+ },
+ {
+  "name": "のりちゃん",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "みた",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "Get Back",
+   "なぞの四人目の男"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "もんた",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "Get Back",
+   "銀河鉄道の夜 赤"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イトウ",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "メイソン",
+  "gen": "現実世代（親）",
+  "desc": "人狼ルーム専属プレイヤーの自由人レジェンド。カミングアウター村の考案者。",
+  "events": [
+   "メイソン編",
+   "This is history"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "％",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲",
+   "フェロウズ、月へ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "（FELLOWS一同）",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "G",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "Inazma",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "Mind Gamesの部員たち",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "N",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "サンタ人狼（クリスマス編）"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "S",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "SACTA-LOW",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "T.ヨシザウルス・ムンチャクッパス",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "U",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "メイソン編"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "V",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWSスペシャル人狼"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "かしこ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "きゃのん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "シノの魂"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ぐぐ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "こはる",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "こまるぞぅ",
+  "gen": "子世代（新入生）",
+  "desc": "「困るぞぅ」が口癖の生徒。第4回天下一武狼会では“まだ入学していないのに呼ばれて困る”と言いつつ奮闘。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "し",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "すいか",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "たけ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "なっち（ねえ笑って？）",
+  "gen": "子世代",
+  "desc": "「最後はみんな笑って終われるといいよね」が信条の生徒。天下一武狼会でも“ちゃんと笑える日”を願う。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ひらり",
+  "gen": "子世代",
+  "desc": "祖父も優勝経験があるという生徒。第4回大会では“空から嫌な音”＝ドクターペロの襲来をいち早く察知する。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "びじょん",
+  "gen": "被害者／＝ぴろうず",
+  "desc": "『ナカマセカイ』の被害者。その正体はぴろうず＝しのぴ。“ナカマセカイ事変”で死亡したとされる存在。",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [
+   "しのぴ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ほか本編に準ずる",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲 リメイク"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "まりちゃん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ケヤグセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "むーちゃん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "もっちー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "やまぴー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "やま爺",
+  "gen": "NPC",
+  "desc": "『フェロウズ、月へ』の結末で、崩壊する月から逃れた月の民（狼男）を地球で受け入れるNPC。ラップを刻む。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ゆっくん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "らび",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "Get Back"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "りんご",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ケヤグセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "るい",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "Get Back"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アックマン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アナウンサー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アーダ・コーダ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "怪獣"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イム・ステレオタイプ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "怪獣"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "エア・コントロール",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "カコ（かちょぱ）",
+  "gen": "敵→仲間",
+  "desc": "『ラストクリスマスの逆襲 リメイク』の潜入スパイ（演：かっくん）。組織ラストクリスマスの側近だが、学園の子供達に触れて心が変わっていく。",
+  "events": [
+   "ラストクリスマスの逆襲 リメイク"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "コロン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "コロ助",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ジュン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "スケさん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ダンカン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "デイジー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "デンデ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ドクターペロ",
+  "gen": "敵／人造人間",
+  "desc": "『失われた天下一武狼会 第4回の記憶』の襲来者。最強の人狼を求め自らを改造した異形の人造人間。同じ人造の存在にゃんぽ子を取り込み完全体化し、奪還を賭けた“ペロゲーム”を仕掛ける。滅ぼすのではなく“最高の人狼ゲームで楽しむ”のが目的。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [
+   "にゃんぽ子"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ドラキュラマン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "バンビンビンベンボングラフィティー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "フリーザ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ベニバスモモ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ポルンガ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "マドック",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "マンモスのりピー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ムムム",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ヨースケ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 青"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ヨースケサンタマリア",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 青"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "中島",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "伊藤",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "大野",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "家政婦の・ミタ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "最長老",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "月の狼男（ストレンジディックス）",
+  "gen": "惑星の子孫",
+  "desc": "月に住むヒップホップ狼男の一家（フレディ／DJペレッペ／Y-指定）。",
+  "events": [
+   "フェロウズ、月へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "村中",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "森本",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "真由美",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "結",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "藤澤",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "蛍原徹",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWSスペシャル人狼"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "音楽と政治、両方尊重♥",
+  "gen": "子世代",
+  "desc": "「人狼にもいろんな在り方がある」と多様な考え方を尊重する生徒。人間改造の話には強く反応する。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "香川",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "魔理沙は大変なものを盗んでいきました",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ }
+]

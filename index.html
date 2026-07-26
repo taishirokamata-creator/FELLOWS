@@ -67,7 +67,47 @@ details[open] summary::before{content:"▾ "}
 .gcard h4{margin:0 0 4px;font-size:15px}
 .gcard .gen{font-size:11px;color:var(--gold);margin-bottom:6px}
 .gcard p{margin:0;font-size:13px;color:#cdd6df}
+a.tcard{display:block;text-decoration:none;color:inherit;transition:.12s}
+a.tcard:hover{border-color:var(--blue);transform:translateY(-2px);background:var(--panel2)}
+a.tcard .gen{color:var(--blue)}
+.tarrow{font-size:11px;color:var(--muted)}
 .warn{color:var(--accent);font-size:12px}
+/* --- 人物名鑑（個別カード＋検索＋モーダル） --- */
+.ptools{max-width:900px;margin:0 auto 14px}
+.psearch{width:100%;padding:10px 14px;border-radius:10px;border:1px solid var(--line);
+  background:var(--panel);color:var(--text);font-size:14px;font-family:inherit}
+.psearch:focus{outline:none;border-color:var(--accent)}
+.pfilters{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:10px}
+.pfilters button{background:var(--panel);border:1px solid var(--line);color:var(--muted);
+  font-size:12px;padding:4px 11px;border-radius:999px;cursor:pointer;font-family:inherit}
+.pfilters button.on{background:rgba(229,72,77,.16);border-color:var(--accent);color:var(--text)}
+.grid.people{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}
+.pcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px;
+  cursor:pointer;transition:.12s;display:flex;flex-direction:column;gap:3px}
+.pcard:hover{border-color:var(--accent);transform:translateY(-2px);background:var(--panel2)}
+.pcard h4{margin:0;font-size:14px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.pcard .gen{font-size:11px;color:var(--gold)}
+.pcard .cnt{font-size:11px;color:var(--muted);margin-left:auto}
+.pcard .prev{margin:0;font-size:12px;color:#aeb9c4;overflow:hidden;text-overflow:ellipsis;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.badge-main{font-size:10px;background:rgba(74,163,255,.18);color:var(--blue);border-radius:4px;padding:1px 5px}
+.pempty{text-align:center;color:var(--muted);padding:30px;font-size:14px}
+/* modal */
+.overlay{position:fixed;inset:0;background:rgba(3,6,10,.72);backdrop-filter:blur(3px);
+  display:none;align-items:center;justify-content:center;z-index:100;padding:18px}
+.overlay.on{display:flex}
+.sheet{background:var(--panel);border:1px solid var(--line);border-radius:14px;max-width:560px;width:100%;
+  max-height:86vh;overflow:auto;padding:22px 22px 26px;position:relative;
+  box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.sheet .x{position:absolute;top:12px;right:14px;background:none;border:none;color:var(--muted);
+  font-size:24px;cursor:pointer;line-height:1}
+.sheet h3{margin:0 6px 2px 0;font-size:22px;display:inline}
+.sheet .genline{color:var(--gold);font-size:12px;margin:8px 0 14px}
+.sheet .lbl{color:var(--muted);font-size:11px;letter-spacing:.05em;margin:16px 0 6px;text-transform:uppercase}
+.sheet .desc{font-size:14px;line-height:1.75;color:#dbe3ea;margin:0}
+.sheet a.wiki{display:inline-block;margin-top:18px;font-size:13px;color:var(--blue);
+  border:1px solid var(--line);border-radius:8px;padding:7px 13px;text-decoration:none}
+.sheet a.wiki:hover{border-color:var(--blue)}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:24px}
 .legend{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:10px 0 0;font-size:12px;color:var(--muted)}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
@@ -114,14 +154,18 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:24px}
   </section>
 
   <section class="view" id="people">
-    <h2 class="sec">人物名鑑 ― 世代と血縁</h2>
-    <p class="lead">シリーズ横断で登場する主要キャラ。多くは現実世代（親）とフェローズ学園の子世代（子）が親子・子孫の関係で結ばれています。</p>
-    <div class="grid" id="people-grid"></div>
+    <h2 class="sec">人物名鑑 ― 1人ずつ、押すと詳細</h2>
+    <p class="lead">配役から自動抽出した<b id="people-count">—</b>人を1人=1カードで掲載（多く出ている順）。カードを押すと世代・説明・出演公演・血縁が開きます。📚 は用語Wikiの個別ページへ。</p>
+    <div class="ptools">
+      <input id="people-q" class="psearch" type="search" placeholder="🔍 人物名で絞り込み（例：にゃんぽ／ペロ／ア・バイバイ）" autocomplete="off">
+      <div class="pfilters" id="people-filters"></div>
+    </div>
+    <div class="grid people" id="people-grid"></div>
   </section>
 
   <section class="view" id="world">
     <h2 class="sec">世界観・設定キーワード</h2>
-    <p class="lead">新しいストーリーを作るときの土台になる設定辞典。</p>
+    <p class="lead">新しいストーリーを作るときの土台になる設定辞典（設定＋特殊キーワード）。各カードを押すと用語Wikiの個別ページ（関連公演・被リンク付き）へ。</p>
     <div class="grid" id="world-grid"></div>
   </section>
 </main>
@@ -129,6 +173,10 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:24px}
 <footer>
   自動生成：<span id="gen"></span> ／ データ元：過去データPDF・Word台本 ／ 一次データ：<code>data/fellows_db.json</code>
 </footer>
+
+<div class="overlay" id="overlay">
+  <div class="sheet" id="sheet"></div>
+</div>
 
 <script>
 const DATA = {
@@ -1664,7 +1712,7 @@ function chips(arr,cls){return '<div class="chips">'+arr.map(x=>'<span class="ch
 
 // ---- Story timeline (explicit in-universe order) ----
 const ORDER=['story-sep','story-oct','shino','meison','xmas','special','openeyes',
-  'lastxmas','lastxmas-remake','never','space','naoki','moon','future','thishistory','keyagu','nakama','naoki-close','fourth','ginga-red','ginga-blue','tenka','getback','valentine','gakuenz','kaiju','nameku'];
+  'lastxmas','lastxmas-remake','never','space','naoki','moon','future','thishistory','keyagu','nakama','naoki-close','fourth','ginga-red','ginga-blue','tenka','tenka4','getback','valentine','gakuenz','kaiju','nameku'];
 const evs=[...DATA.events].sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id));
 document.getElementById('story-tl').innerHTML = evs.map(e=>{
   const sup = (e.id==='thishistory'||e.id==='keyagu');
@@ -1716,13 +1764,1478 @@ document.getElementById('real-tl').innerHTML = revs.map(e=>`
   </div>`).join('') +
   (unk.length?`<div class="node"><div class="yr">開催日 要確認</div><div class="card"><h3>日付未確定の公演</h3>${chips(unk.map(e=>e.title))}</div></div>`:'');
 
-// ---- People ----
-document.getElementById('people-grid').innerHTML = DATA.chars.map(c=>`
-  <div class="gcard"><h4>${c.name}</h4><div class="gen">${c.gen}</div><p>${c.role}</p></div>`).join('');
+// ---- People (1人=1カード、押すと詳細モーダル) ----
+const PEOPLE = [
+ {
+  "name": "しのぴ",
+  "gen": "創始者／GM",
+  "desc": "FELLOWS貸切主催・GM。青森出身。人間しのぴは2034年に病死し、以後 AIしのぴ→（超未来では）ぴろうず として物語全体を貫く“世界そのもの”。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "ラストクリスマスの逆襲 リメイク",
+   "FELLOWS、宇宙へ",
+   "フェロウズ、未来へ",
+   "NEVER！NEVER！NEVER！",
+   "This is history",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z"
+  ],
+  "n": 20,
+  "kin": [
+   "にゃんぽ子",
+   "ギャラガー"
+  ],
+  "authored": true
+ },
+ {
+  "name": "脇脇脇男",
+  "gen": "親→子",
+  "desc": "親＝わっき〜。子＝脇脇脇男（勘が鋭い）。改名メタでは“ワキヤスメ・アツコ”とも。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 18,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "にゃんぽ子",
+  "gen": "親→子",
+  "desc": "親＝にゃんぽこ、子＝にゃんぽ子。『フェロウズ、未来へ』でしのぴから学園長を引き継ぐ。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "ケヤグセカイ",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 17,
+  "kin": [
+   "しのぴ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "みの",
+  "gen": "親→子",
+  "desc": "親＝マノ。子＝みの（みのミュージック）。音楽・ビートルズ好きで、サンタどっきりの発案者。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "Get Back",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 17,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "イム・スヒョン",
+  "gen": "親→子",
+  "desc": "親＝イムラ（アルティメット人狼出演）。子＝イム・スヒョンは宇宙船の操縦を任される中心格。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z"
+  ],
+  "n": 16,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "アウトオブウメコ",
+  "gen": "親→子／改名",
+  "desc": "スイーツ人狼ルーム店長の子＝梅田。改名メタでアウトオブウメコに。",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "ケヤグセカイ",
+   "Get Back",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 15,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "クニタケチユキ",
+  "gen": "親→子",
+  "desc": "親＝ちゆっきー。子＝バンド THE FOREVER YOUNG（エバヤン）のボーカル。『FELLOWS』の名の由来に関わる。",
+  "events": [
+   "ストーリー人狼9月編",
+   "シノの魂",
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "バレンタイン告白大作戦人狼",
+   "怪獣"
+  ],
+  "n": 15,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "三田村以外の新入生ほか",
+  "gen": "子世代・新入生",
+  "desc": "ヘンリー王子・ストーブ・たくや・まぐろ・％・G・ルイ1444世・幸子・いと・夏子・すー夫・グッチ裕三・ガッツ石松・はちお 等、個性豊かなフェローズ学園の生徒たち。",
+  "events": [
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 15,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ア・バイバイ",
+  "gen": "子／改名",
+  "desc": "祖父＝阿部洸希、父＝某首相。ビートルズ好き。改名メタでア・バイバイに。",
+  "events": [
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "NEVER！NEVER！NEVER！",
+   "FELLOWS、ナメック星へ",
+   "なぞの四人目の男",
+   "失われた天下一武狼会 第4回の記憶",
+   "バレンタイン告白大作戦人狼",
+   "怪獣"
+  ],
+  "n": 14,
+  "kin": [
+   "阿部洸希"
+  ],
+  "authored": true
+ },
+ {
+  "name": "阿部洸希",
+  "gen": "現実世代（親）",
+  "desc": "人狼ルームGM／終身名誉GM。レジェンド。孫世代が安倍（ア・バイバイ）。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "ラストクリスマスの逆襲 リメイク",
+   "This is history",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "Get Back",
+   "なぞの四人目の男",
+   "FELLOWS学園Z"
+  ],
+  "n": 11,
+  "kin": [
+   "ア・バイバイ",
+   "ガッツ石松"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ハマ・ヤンクミ",
+  "gen": "子世代",
+  "desc": "某熱血教師の子孫。なぜか関西弁。学級委員長格。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "メイソン編",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "怪獣"
+  ],
+  "n": 9,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "人狼ルームGM・レジェンド勢",
+  "gen": "現実世代（親）",
+  "desc": "柏村・浦・仲田・富山(とみー)・石丸・児玉ら、人狼ルームのGM／レジェンド勢。子世代の親・祖父にあたる。",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "This is history",
+   "Get Back",
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "FELLOWS学園Z"
+  ],
+  "n": 9,
+  "kin": [
+   "なおき"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ひ子",
+  "gen": "親→子",
+  "desc": "滋賀のゆるキャラの系譜。子＝ひ子（すー夫の妻）。",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "NAOKI EMPIRE INVASION",
+   "ケヤグセカイ",
+   "Get Back",
+   "バレンタイン告白大作戦人狼",
+   "怪獣"
+  ],
+  "n": 8,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ヘンリー王子",
+  "gen": "子世代",
+  "desc": "かの有名なヘンリー王子の子孫。でも父は新潟産まれ。",
+  "events": [
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 6,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "J／F",
+  "gen": "親→子",
+  "desc": "親＝J（唯一無二のエンターテイナー）。子＝F。",
+  "events": [
+   "ストーリー人狼9月編",
+   "シノの魂",
+   "オープン・ザ・アイズ",
+   "ケヤグセカイ",
+   "Get Back"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "L",
+  "gen": "子世代",
+  "desc": "惑星編で活躍する冷静な推理役。NAOKI帝国編・月編に登場。",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "FELLOWS、ナメック星へ",
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "うに",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "Get Back"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "三田村（ミコ）",
+  "gen": "新入生",
+  "desc": "元ラストクリスマスのスパイ→和解して入学。以後の惑星編にレギュラー出演。",
+  "events": [
+   "ラストクリスマスの逆襲",
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "イクラ",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "メイソン編",
+   "サンタ人狼（クリスマス編）",
+   "FELLOWSスペシャル人狼",
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ギャラガー",
+  "gen": "AI",
+  "desc": "AIしのぴが各惑星のFELLOWSの子孫を集めるために作り続けたAI群。正体は『フェロウズ、未来へ』で判明。",
+  "events": [
+   "FELLOWS、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ"
+  ],
+  "n": 4,
+  "kin": [
+   "しのぴ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "亜理紗は大変なものを盗んでいきました",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "フェロウズ、未来へ",
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "にまる",
+  "gen": "親→子",
+  "desc": "母＝ななまる。子＝にまる（“母より5足りない”）。",
+  "events": [
+   "オープン・ザ・アイズ",
+   "ケヤグセカイ",
+   "FELLOWS学園Z"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "へんりー",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）",
+   "シノの魂"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "タグチ姉弟",
+  "gen": "惑星の子孫",
+  "desc": "アトラス星の姉弟チョモ＆ワ。祖父母たぐっちょ・わたくは2043年に地球を去ったFELLOWS。『宇宙へ』で入学。",
+  "events": [
+   "FELLOWS、宇宙へ",
+   "フェロウズ、月へ",
+   "なぞの四人目の男"
+  ],
+  "n": 3,
+  "kin": [
+   "ギャラガー"
+  ],
+  "authored": true
+ },
+ {
+  "name": "中田",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "サンタ人狼（クリスマス編）",
+   "ラストクリスマスの逆襲",
+   "This is history"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "きむら",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "なぞの四人目の男"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "こたつ",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "シノの魂"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "さっちん",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "なおき",
+  "gen": "現実世代（親）→AI",
+  "desc": "スイーツ人狼ルームGM。2025年に人狼ルームへ移籍→反発層が『スイーツ派』を結成。子孫がAI『NAOKI』を作り、なおき帝国の王となる。",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "NAOKI CLOSE"
+  ],
+  "n": 2,
+  "kin": [
+   "人狼ルームGM・レジェンド勢"
+  ],
+  "authored": true
+ },
+ {
+  "name": "のりちゃん",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "みた",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "Get Back",
+   "なぞの四人目の男"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "もんた",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "Get Back",
+   "銀河鉄道の夜 赤"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イトウ",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ストーリー人狼9月編",
+   "ハロウィン人狼（10月編）"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "メイソン",
+  "gen": "現実世代（親）",
+  "desc": "人狼ルーム専属プレイヤーの自由人レジェンド。カミングアウター村の考案者。",
+  "events": [
+   "メイソン編",
+   "This is history"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "％",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲",
+   "フェロウズ、月へ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "（FELLOWS一同）",
+  "gen": "脇役",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "G",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "Inazma",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "Mind Gamesの部員たち",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "N",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "サンタ人狼（クリスマス編）"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "S",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "SACTA-LOW",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "T.ヨシザウルス・ムンチャクッパス",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "U",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "メイソン編"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "V",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWSスペシャル人狼"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "かしこ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "きゃのん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "シノの魂"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ぐぐ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "こはる",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "こまるぞぅ",
+  "gen": "子世代（新入生）",
+  "desc": "「困るぞぅ」が口癖の生徒。第4回天下一武狼会では“まだ入学していないのに呼ばれて困る”と言いつつ奮闘。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "し",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "すいか",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "たけ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "なっち（ねえ笑って？）",
+  "gen": "子世代",
+  "desc": "「最後はみんな笑って終われるといいよね」が信条の生徒。天下一武狼会でも“ちゃんと笑える日”を願う。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ひらり",
+  "gen": "子世代",
+  "desc": "祖父も優勝経験があるという生徒。第4回大会では“空から嫌な音”＝ドクターペロの襲来をいち早く察知する。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "びじょん",
+  "gen": "被害者／＝ぴろうず",
+  "desc": "『ナカマセカイ』の被害者。その正体はぴろうず＝しのぴ。“ナカマセカイ事変”で死亡したとされる存在。",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [
+   "しのぴ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ほか本編に準ずる",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲 リメイク"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "まりちゃん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ケヤグセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "むーちゃん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "もっちー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "やまぴー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "やま爺",
+  "gen": "NPC",
+  "desc": "『フェロウズ、月へ』の結末で、崩壊する月から逃れた月の民（狼男）を地球で受け入れるNPC。ラップを刻む。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ゆっくん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "らび",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "Get Back"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "りんご",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ケヤグセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "るい",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "Get Back"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アックマン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アナウンサー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アーダ・コーダ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "怪獣"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イム・ステレオタイプ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "怪獣"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "エア・コントロール",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "カコ（かちょぱ）",
+  "gen": "敵→仲間",
+  "desc": "『ラストクリスマスの逆襲 リメイク』の潜入スパイ（演：かっくん）。組織ラストクリスマスの側近だが、学園の子供達に触れて心が変わっていく。",
+  "events": [
+   "ラストクリスマスの逆襲 リメイク"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "コロン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "コロ助",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ジュン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "スケさん",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ダンカン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "デイジー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "デンデ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ドクターペロ",
+  "gen": "敵／人造人間",
+  "desc": "『失われた天下一武狼会 第4回の記憶』の襲来者。最強の人狼を求め自らを改造した異形の人造人間。同じ人造の存在にゃんぽ子を取り込み完全体化し、奪還を賭けた“ペロゲーム”を仕掛ける。滅ぼすのではなく“最高の人狼ゲームで楽しむ”のが目的。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [
+   "にゃんぽ子"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ドラキュラマン",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "バンビンビンベンボングラフィティー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "フリーザ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ベニバスモモ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ポルンガ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "マドック",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "マンモスのりピー",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ムムム",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ヨースケ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 青"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ヨースケサンタマリア",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 青"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "中島",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "伊藤",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "大野",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "家政婦の・ミタ",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "最長老",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "月の狼男（ストレンジディックス）",
+  "gen": "惑星の子孫",
+  "desc": "月に住むヒップホップ狼男の一家（フレディ／DJペレッペ／Y-指定）。",
+  "events": [
+   "フェロウズ、月へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "村中",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "森本",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "真由美",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "結",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "藤澤",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "蛍原徹",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "FELLOWSスペシャル人狼"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "音楽と政治、両方尊重♥",
+  "gen": "子世代",
+  "desc": "「人狼にもいろんな在り方がある」と多様な考え方を尊重する生徒。人間改造の話には強く反応する。",
+  "events": [
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "香川",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "This is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "魔理沙は大変なものを盗んでいきました",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "バレンタイン告白大作戦人狼"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ }
+];
+const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const pgrid=document.getElementById('people-grid');
+const overlay=document.getElementById('overlay'), sheet=document.getElementById('sheet');
+document.getElementById('people-count').textContent=PEOPLE.length;
 
-// ---- World ----
-document.getElementById('world-grid').innerHTML = DATA.world.map(w=>`
-  <div class="gcard"><h4>${w.k}</h4><p>${w.v}</p></div>`).join('');
+// 世代フィルタ（大分類）
+function bucket(g){
+  if(/創始|GM/.test(g)) return '創始/GM';
+  if(/親/.test(g)&&/子/.test(g)) return '親子';
+  if(/親/.test(g)) return '現実世代（親）';
+  if(/子|新入生/.test(g)) return '子世代';
+  if(/AI|惑星/.test(g)) return 'AI/惑星';
+  if(/敵|被害|NPC/.test(g)) return '敵/NPC';
+  if(/端役|脇役/.test(g)) return '端役/脇役';
+  return 'その他';
+}
+const BUCKETS=['すべて','創始/GM','親子','現実世代（親）','子世代','AI/惑星','敵/NPC','端役/脇役'];
+let curBucket='すべて', curQ='';
+const fbox=document.getElementById('people-filters');
+fbox.innerHTML=BUCKETS.map((b,i)=>`<button class="${i===0?'on':''}" data-b="${b}">${b}</button>`).join('');
+fbox.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+  fbox.querySelectorAll('button').forEach(x=>x.classList.remove('on'));
+  btn.classList.add('on'); curBucket=btn.dataset.b; renderPeople();
+}));
+document.getElementById('people-q').addEventListener('input',e=>{curQ=e.target.value.trim();renderPeople();});
+
+function renderPeople(){
+  const list=PEOPLE.filter(p=>{
+    if(curBucket!=='すべて' && bucket(p.gen)!==curBucket) return false;
+    if(curQ && !((p.name+p.gen+(p.desc||'')).includes(curQ))) return false;
+    return true;
+  });
+  if(!list.length){pgrid.innerHTML='<div class="pempty">該当なし</div>';return;}
+  pgrid.innerHTML=list.map((p,i)=>{
+    const idx=PEOPLE.indexOf(p);
+    const main=p.authored?'<span class="badge-main">主要</span>':'';
+    const prev=p.desc?esc(p.desc):'出演：'+p.events.join('・');
+    return `<div class="pcard" data-i="${idx}">
+      <h4>${esc(p.name)} ${main}<span class="cnt">${p.n}公演</span></h4>
+      <div class="gen">${esc(p.gen)}</div>
+      <p class="prev">${prev}</p></div>`;
+  }).join('');
+  pgrid.querySelectorAll('.pcard').forEach(c=>c.addEventListener('click',()=>openPerson(+c.dataset.i)));
+}
+function openPerson(i){
+  const p=PEOPLE[i];
+  const evs=p.events.map(t=>'<span class="chip">'+esc(t)+'</span>').join('');
+  const kin=(p.kin&&p.kin.length)?p.kin.map(k=>'<span class="chip">'+esc(k)+'</span>').join(''):'—';
+  sheet.innerHTML=`<button class="x" aria-label="閉じる">×</button>
+    <h3>${esc(p.name)}</h3>${p.authored?' <span class="badge-main">主要</span>':''}
+    <div class="genline">${esc(p.gen)}　｜　出演 ${p.n}公演</div>
+    ${p.desc?`<p class="desc">${esc(p.desc)}</p>`:'<p class="desc" style="color:var(--muted)">（配役から自動生成。詳しい説明は今後追記予定）</p>'}
+    <div class="lbl">出演公演</div><div class="chips">${evs}</div>
+    <div class="lbl">血縁・関連</div><div class="chips">${kin}</div>
+    <a class="wiki" href="wiki.html#${encodeURIComponent(p.name)}" target="_blank" rel="noopener">📚 用語Wikiの個別ページを開く ↗</a>`;
+  sheet.querySelector('.x').addEventListener('click',closeOverlay);
+  overlay.classList.add('on');
+}
+function closeOverlay(){overlay.classList.remove('on');}
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeOverlay();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeOverlay();});
+renderPeople();
+
+// ---- World（設定＋特殊キーワード。カードは用語Wikiの個別ページへ） ----
+function termCard(k,v,cls){
+  return `<a class="gcard tcard" href="wiki.html#${encodeURIComponent(k)}" target="_blank" rel="noopener">
+    <h4>${esc(k)} <span class="tarrow">↗</span></h4>
+    ${cls?`<div class="gen">${cls}</div>`:''}<p>${esc(v)}</p></a>`;
+}
+document.getElementById('world-grid').innerHTML =
+  DATA.world.map(w=>termCard(w.k,w.v,'設定')).join('') +
+  (DATA.keywords||[]).map(k=>termCard(k.k,k.v,'特殊キーワード')).join('');
 </script>
 </body>
 </html>
