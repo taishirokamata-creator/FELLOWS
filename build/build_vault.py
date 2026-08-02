@@ -222,7 +222,7 @@ tags: [公演, FELLOWS]
 {conn if conn else "—"}
 
 ---
-🏠 [[00_HOME]]　｜　🌏 [[正史年表]]　｜　🗓 [[現実の開催史]]
+🏠 [[00_HOME]]　｜　🌏 [[作中年表]]　｜　🗓 [[現実の開催史]]
 """
     w("公演", st, body)
 
@@ -334,34 +334,62 @@ tags: [設定, 世界観, FELLOWS]
 """
     w("設定", wdisp(wd["k"]), body)
 
-# ---------- 生成: 正史年表 ----------
-canon_lines = []
+# ---------- 生成: 作中年表（FELLOWS世界の人狼・作中年代の線表） ----------
+def _first_year(s):
+    if "5524" in s: return 5524
+    m = re.search(r"(\d{4})", s)
+    return int(m.group(1)) if m else None
+EV_IU_NUM = {  # iu_dateが非数値/枠組み表記の公演の作中年を補正
+ "story-sep":2023, "story-oct":1978, "getback":2024, "nakama":2024,
+ "fourth":2026, "ginga-red":2026, "ginga-blue":2026, "keyagu":5524,
+ "kaiju":2200, "naoki-close":2075, "tenka-gendai":2025, "nameku":2076,
+}
+EV_SKIP = {"tenka"}  # 総称シリーズは線表から除外
+def _ev_num(e):
+    if e["id"] in EV_IU_NUM: return EV_IU_NUM[e["id"]]
+    return _first_year(e["iu_date"]) or 9999
+def _year_header(num):
+    sp = {1978:"1978年（ハロウィン・劇中設定）", 2200:"2XXX年（学園史よりはるか未来）",
+          5524:"西暦5524年（超未来）", 9999:"作中年代 未確定"}
+    return sp.get(num, f"{num}年")
+
+_tl = {}
 for c in db["canon"]:
-    canon_lines.append(f"### {c['year']} — {c['title']}\n{c['detail']}" + (
-        "\n> ⚠️ 台本間で年に揺れあり（要確認）" if c.get("warn") else ""))
+    n = _first_year(c["year"]) or 9999
+    _tl.setdefault(n, []).append(("📌", None, c["title"], c["detail"], c.get("warn")))
+for e in db["events"]:
+    if e["id"] in EV_SKIP: continue
+    n = _ev_num(e)
+    _tl.setdefault(n, []).append(("🎭", SHORT.get(e["id"], e["title"]), e["title"], e["logline"], False))
+
+tl_lines = []
+for n in sorted(_tl):
+    tl_lines.append(f"### {_year_header(n)}")
+    for icon, link, title, blurb, warn in sorted(_tl[n], key=lambda x: (x[0] != "📌",)):
+        head = f"[[{sanitize(link)}]]" if link else f"**{title}**"
+        w_ = "　⚠️年に揺れあり" if warn else ""
+        tl_lines.append(f"- {icon} {head}{w_} — {blurb}")
+    tl_lines.append("")
 canon_body = f"""---
 type: 年表
-tags: [年表, 正史, FELLOWS]
+tags: [年表, 作中, FELLOWS]
 ---
-# 🌏 正史・大年表（世界の背骨）
+# 🌏 作中年表 ― FELLOWS世界の人狼
 
-各シナリオ冒頭で繰り返される“FELLOWS学園世界の正史”。正典『FELLOWS学園_世界観・事前共有.pdf』では作中の「現在」は **2076年**（初期台本の2073〜2075表記から更新）。
+人狼ルーム発『FELLOWS世界の人狼』の作中年代の年表。原点の人狼ルームから超未来まで、各ストーリー（**FELLOWS学園もそのひとつ**）を作中の時系列で並べています。📌＝世界の出来事／🎭＝各公演（クリックでページへ）。
 
-{chr(10).join(canon_lines)}
-
+{chr(10).join(tl_lines)}
 ---
-## 作中年表（公演を作中年代順に）
-""" + "\n".join(
- f"- **{ev_by_id[i]['iu_date']}** … [[{sanitize(SHORT[i])}]]"
- for i in STORY_ORDER if i in ev_by_id
-) + "\n\n🏠 [[00_HOME]]　｜　📝 [[調べるリスト]]\n"
-w("年表", "正史年表", canon_body)
+🏠 [[00_HOME]]　｜　🗓 [[現実の開催史]]
+"""
+w("年表", "作中年表", canon_body)
 
-# ---------- 生成: 現実の開催史 ----------
+# ---------- 生成: 現実の開催史（開催日 / 公演 / 内容） ----------
 def realkey(e):
     m = re.search(r'(\d{4})年(\d{1,2})?月?(\d{1,2})?', e["real_date"])
-    if not m: return (9999, 99)
-    return (int(m.group(1)), int(m.group(2)) if m.group(2) else 1)
+    if not m: return (9999, 99, 99)
+    return (int(m.group(1)), int(m.group(2)) if m.group(2) else 99,
+            int(m.group(3)) if m.group(3) else 99)
 rows = sorted(db["events"], key=realkey)
 real_body = """---
 type: 年表
@@ -369,32 +397,17 @@ tags: [年表, 開催史, FELLOWS]
 ---
 # 🗓 現実の開催史（いつ何を上演したか）
 
-確定日はフォルダ名・タイトル・フライヤー、「目安」はフォルダ更新日時からの推定。
+『FELLOWS世界の人狼』を実際に上演した日付順。公演名からページへ飛べます。
 
-| 現実の開催日 | 公演 | 作中年代 |
+| 現実の開催日 | 公演 | 内容 |
 |---|---|---|
 """ + "\n".join(
- f"| {e['real_date']} | [[{sanitize(SHORT[e['id']])}]] | {e['iu_date']} |" for e in rows
+ f"| {e['real_date']} | [[{sanitize(SHORT[e['id']])}]] | {e['logline'].replace('|','／')} |" for e in rows
 ) + """
 
-> 「要確認」の開催日・未精読の台本などは 📝 [[調べるリスト]] にまとめています。
-
-🏠 [[00_HOME]]　｜　📝 [[調べるリスト]]
+🏠 [[00_HOME]]　｜　🌏 [[作中年表]]
 """
 w("年表", "現実の開催史", real_body)
-
-# ---------- 生成: 調べるリスト（open questions） ----------
-oq = db.get("open_questions", [])
-oq_body = """---
-type: 調べるリスト
-tags: [TODO, 調べる, FELLOWS]
----
-# 📝 調べるリスト（あとで確認）
-
-主催 **しのぴ（@sea_now13）** に聞くか、詳しい人に確認する事項。分かり次第 `fellows_db.json` に反映して再生成。
-
-""" + "\n".join(f"- [ ] {q}" for q in oq) + "\n\n🏠 [[00_HOME]]　｜　🗓 [[現実の開催史]]\n"
-w("年表", "調べるリスト", oq_body)
 
 # ---------- 生成: HOME (MOC) ----------
 home = f"""---
@@ -407,9 +420,8 @@ tags: [HOME, FELLOWS]
 このノートを起点に、公演・人物・世界観・年表が `[[リンク]]` で繋がっています（左のグラフビューで全体像が見えます）。
 
 ## 🗺 まず見る
-- [[正史年表]] — 世界の背骨（2013年→超未来5524年）
+- [[作中年表]] — FELLOWS世界の人狼の作中年代（人狼ルーム→超未来）
 - [[現実の開催史]] — いつ何を上演したか
-- 📝 [[調べるリスト]] — 未確定の開催日・未精読の台本など
 
 ## 📖 公演（作中年代順）
 """ + "\n".join(
