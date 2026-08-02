@@ -240,11 +240,12 @@
    "ラストクリスマスの逆襲 リメイク",
    "FELLOWS、宇宙へ",
    "This is history, this is history, right here, right now, this is history",
+   "ナカマセカイ",
    "FELLOWS、ナメック星へ",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼"
   ],
-  "n": 8,
+  "n": 9,
   "kin": [
    "しの",
    "にゃんぽ子",
@@ -955,18 +956,6 @@
   "authored": false
  },
  {
-  "name": "Mind Gamesの部員たち",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
-  "desc": "",
-  "events": [
-   "ナカマセカイ"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "N",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1319,7 +1308,7 @@
   "authored": true
  },
  {
-  "name": "びじょん",
+  "name": "ぴじょん",
   "kind": "キャラ",
   "gen": "被害者",
   "desc": "『ナカマセカイ』の被害者。その正体はぴろうず＝しの。作中で殺され、死亡したとされる。",
@@ -1489,12 +1478,48 @@
   "authored": false
  },
  {
+  "name": "アレサ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "アンソニー",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "アーダ・コーダ",
   "kind": "キャラ",
   "gen": "作中キャラ",
   "desc": "",
   "events": [
    "怪獣"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イギー",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
   ],
   "n": 1,
   "kin": [],
@@ -1609,6 +1634,30 @@
   "authored": false
  },
  {
+  "name": "ジェリーリー",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ジャニス",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ジュン",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1633,6 +1682,18 @@
   "authored": false
  },
  {
+  "name": "ゼルダ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ダンカン",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1645,12 +1706,36 @@
   "authored": false
  },
  {
+  "name": "チャップマン",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "チョモ・ランマ・タグチ",
   "kind": "キャラ",
   "gen": "作中キャラ",
   "desc": "",
   "events": [
    "FELLOWS、宇宙へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ティナ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
   ],
   "n": 1,
   "kin": [],
@@ -1719,6 +1804,18 @@
   "authored": false
  },
  {
+  "name": "パティ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "フリーザ",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1749,6 +1846,30 @@
   "desc": "",
   "events": [
    "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ホリー",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ボブ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
   ],
   "n": 1,
   "kin": [],
@@ -1803,6 +1924,18 @@
   "authored": false
  },
  {
+  "name": "ミック",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ミノタウロス",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1821,6 +1954,30 @@
   "desc": "",
   "events": [
    "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "モリッシー",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ヨーク",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
   ],
   "n": 1,
   "kin": [],
@@ -2013,6 +2170,18 @@
   "desc": "",
   "events": [
    "This is history, this is history, right here, right now, this is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "洋子",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ナカマセカイ"
   ],
   "n": 1,
   "kin": [],
