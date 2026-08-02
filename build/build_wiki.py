@@ -112,12 +112,12 @@ def md2html(body):
     return "\n".join(out)
 
 # ---- ページデータ生成 ----
-FM_LABEL = {"type":"種別","シリーズ":"シリーズ","現実開催日":"現実の開催日","作中年代":"作中年代","世代":"世代","tags":"タグ"}
+FM_LABEL = {"type":"種別","区分":"区分","シリーズ":"シリーズ","現実開催日":"現実の開催日","作中年代":"作中年代","世代":"世代","tags":"タグ"}
 data = {}
 for t, pg in pages.items():
     fm = pg["fm"]
     infobox = []
-    for k in ["type","世代","シリーズ","現実開催日","作中年代","tags"]:
+    for k in ["type","区分","世代","シリーズ","現実開催日","作中年代","tags"]:
         if k in fm and fm[k] and k != "aliases":
             v = fm[k].strip('[]"').replace('"','').replace(", "," / ")
             infobox.append([FM_LABEL.get(k,k), v])
