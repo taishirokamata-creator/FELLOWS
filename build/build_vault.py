@@ -183,16 +183,25 @@ def worlds_for_event(e):
 for e in db["events"]:
     st = SHORT.get(e["id"], e["title"])
     cast_nodes = []
+    cast_links = []
+    seen_disp = set()
     for raw in e.get("chars", []):
         cn = canon_for(raw)
         node = cn if cn else link_name(raw)
         if node and node not in cast_nodes:
             cast_nodes.append(node)
+        disp = cast_clean(raw)          # その回で使われた表記（as-played）を優先表示
+        if not disp or disp in seen_disp:
+            continue
+        seen_disp.add(disp)
+        if node and sanitize(node) != disp:
+            cast_links.append(f"[[{sanitize(node)}|{disp}]]")   # 表示=その回の名前 / リンク=正規キャラページ
+        else:
+            cast_links.append(f"[[{sanitize(disp)}]]")
     for node in cast_nodes:
         node_appears.setdefault(node, [])
         if e["id"] not in node_appears[node]:
             node_appears[node].append(e["id"])
-    cast_links = [f"[[{sanitize(n)}]]" for n in cast_nodes]
     conn = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in CONNECT.get(e["id"], []))
     wl = " / ".join(f"[[{sanitize(wdisp(wk))}]]" for wk in worlds_for_event(e))
     body = f"""---
