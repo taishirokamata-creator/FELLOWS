@@ -209,6 +209,8 @@ for e in db["events"]:
             node_appears[node].append(e["id"])
     conn = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in CONNECT.get(e["id"], []))
     wl = " / ".join(f"[[{sanitize(wdisp(wk))}]]" for wk in worlds_for_event(e))
+    chant = str(e.get("chant", "")).strip()   # 掛け声担当（分かる回だけ）
+    chant_line = f"　｜　**掛け声担当**：{chant}" if chant else ""
     body = f"""---
 type: 公演
 aliases: ["{e['title']}"]
@@ -220,7 +222,7 @@ tags: [公演, FELLOWS]
 > [!quote] {e['logline']}
 
 **シリーズ**：{e['series']}
-**現実の開催日**：{e['real_date']}　｜　**作中年代**：{e['iu_date']}
+**現実の開催日**：{e['real_date']}　｜　**作中年代**：{e['iu_date']}{chant_line}
 
 ## あらすじ
 {e['synopsis']}
