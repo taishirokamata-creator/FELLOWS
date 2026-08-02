@@ -250,7 +250,7 @@ tags: [人物, FELLOWS]
 ---
 🏠 [[00_HOME]]
 """
-    w("人物", name, body)
+    w("キャラクター", name, body)
 
 # ---------- 生成: 端役ノート（1回でも出たキャラを自動ノート化） ----------
 authored = set(CHARS.keys())
@@ -274,7 +274,7 @@ tags: [人物, FELLOWS, {tag}]
 ---
 🏠 [[00_HOME]]
 """
-    w("人物", node, body)
+    w("キャラクター", node, body)
     minor_count += 1
 
 # ---------- 生成: キーワード（特殊用語）ノート ----------
@@ -310,7 +310,7 @@ tags: [キーワード, 用語, FELLOWS]
 ---
 🏠 [[00_HOME]]
 """
-    w("キーワード", fname, body)
+    w("用語集", fname, body)
     kw_count += 1
 
 # ---------- 生成: 設定ノート ----------
@@ -332,7 +332,7 @@ tags: [設定, 世界観, FELLOWS]
 ---
 🏠 [[00_HOME]]
 """
-    w("設定", wdisp(wd["k"]), body)
+    w("用語集", wdisp(wd["k"]), body)
 
 # ---------- 生成: 作中年表（FELLOWS世界の人狼・作中年代の線表） ----------
 def _first_year(s):
@@ -426,10 +426,11 @@ tags: [HOME, FELLOWS]
 ## 📖 公演（作中年代順）
 """ + "\n".join(
  f"- [[{sanitize(SHORT[i])}]]" for i in STORY_ORDER if i in ev_by_id
-) + "\n\n## 👥 人物（主要）\n" + "　".join(f"[[{sanitize(n)}]]" for n in CHARS) + \
-   f"\n\n> ほか、単発・脇役キャラも各公演から自動でノート化されています（`tags:端役/脇役`）。人物ノート総数 {len(CHARS)+minor_count}。" + \
-   "\n\n## 🔑 世界観設定\n" + "　".join(f"[[{sanitize(wdisp(wd['k']))}]]" for wd in db["world"]) + \
-   "\n\n## 🧩 特殊キーワード（用語集）\n" + "　".join(f"[[{sanitize(n)}]]" for n in kw_names) + \
+) + "\n\n## 👥 キャラクター（主要）\n" + "　".join(f"[[{sanitize(n)}]]" for n in CHARS) + \
+   f"\n\n> ほか、単発・脇役キャラも各公演から自動でノート化されています（`tags:端役/脇役`）。キャラクターノート総数 {len(CHARS)+minor_count}。" + \
+   "\n\n## 📚 用語集（世界観設定＋特殊キーワード）\n" + \
+   "　".join(f"[[{sanitize(wdisp(wd['k']))}]]" for wd in db["world"]) + "　" + \
+   "　".join(f"[[{sanitize(n)}]]" for n in kw_names) + \
    "\n\n---\n*生成元：`年表/data/fellows_db.json`。追記はJSON→再生成、またはノートを直接編集。*\n"
 with open(os.path.join(VAULT, "00_HOME.md"), "w", encoding="utf-8") as f:
     f.write(home)
@@ -457,7 +458,7 @@ with open(os.path.join(BASE, "年表", "data", "people_index.json"), "w", encodi
 
 # 集計
 counts = {d: len([x for x in os.listdir(os.path.join(VAULT, d)) if x.endswith(".md")])
-          for d in ["公演","人物","設定","年表"]}
+          for d in ["公演","キャラクター","用語集","年表"]}
 print("VAULT:", VAULT)
 print("notes:", counts, "+ 00_HOME.md")
 print("people_index.json:", len(people_out), "人")

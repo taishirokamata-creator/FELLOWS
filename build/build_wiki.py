@@ -8,8 +8,8 @@ BASE = os.path.dirname(os.path.dirname(HERE))
 VAULT = os.path.join(BASE, "FELLOWS_Vault")
 OUT   = os.path.join(BASE, "年表", "wiki.html")
 
-CAT_ORDER = ["年表", "公演", "人物", "キーワード", "設定"]
-CAT_ICON  = {"年表":"🗺","公演":"📖","人物":"👥","キーワード":"🧩","設定":"🔑","HOME":"🏠"}
+CAT_ORDER = ["年表", "公演", "キャラクター", "用語集"]
+CAT_ICON  = {"年表":"🗺","公演":"📖","キャラクター":"👥","用語集":"📚","HOME":"🏠"}
 
 def esc(s): return htmlmod.escape(s, quote=False)
 
@@ -213,7 +213,12 @@ header .logo b{color:var(--accent)}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:0;min-height:calc(100vh - 58px)}
 #side{border-right:1px solid var(--line);padding:14px 10px;overflow:auto;max-height:calc(100vh - 58px);position:sticky;top:58px}
 #side h4{margin:14px 8px 6px;font-size:12px;color:var(--muted);letter-spacing:.05em}
-#side .grp{margin:7px 8px 1px;font-size:10px;color:var(--purple);letter-spacing:.1em;font-weight:700;opacity:.85}
+#side .grp{margin:6px 6px 1px;padding:3px 6px;border-radius:6px;font-size:12px;color:var(--purple);
+ letter-spacing:.06em;font-weight:700;cursor:pointer;user-select:none;display:flex;align-items:center;gap:6px}
+#side .grp:hover{background:var(--panel2)}
+#side .grp .tw{font-size:9px;color:var(--muted);width:8px;flex:none;transition:transform .1s}
+#side .grp .gn{margin-left:auto;font-size:10px;color:var(--muted);font-weight:400;opacity:.75}
+#side .grpwrap{margin-left:4px;border-left:1px solid var(--line);padding-left:2px}
 #side a{display:block;padding:4px 8px;border-radius:6px;color:var(--text);font-size:13px}
 #side a:hover{background:var(--panel);text-decoration:none}
 #side a.on{background:var(--accent);color:#fff}
@@ -281,8 +286,14 @@ function buildSide(filter){
    const its = filter ? items.filter(t => t.toLowerCase().includes(filter)) : items;
    if(!its.length) continue;
    total += its.length;
-   if(label) inner += `<div class="grp">${label}</div>`;
-   for(const t of its) inner += `<a href="#${encodeURIComponent(t)}" data-t="${encodeURIComponent(t)}">${t}</a>`;
+   const links = its.map(t => `<a href="#${encodeURIComponent(t)}" data-t="${encodeURIComponent(t)}">${t}</a>`).join('');
+   if(label){
+    const open = !!filter;  // 検索中は該当行を開く。通常は折りたたみ
+    inner += `<div class="grp${open?' open':''}"><span class="tw">${open?'▾':'▸'}</span>${label}<span class="gn">${its.length}</span></div>`
+           + `<div class="grpwrap"${open?'':' style="display:none"'}>${links}</div>`;
+   } else {
+    inner += links; // フラット（グループなし）
+   }
   }
   if(!total) continue;
   h += `<h4>${ICON[c]||''} ${c}（${total}）</h4>` + inner;
@@ -293,6 +304,14 @@ function buildSide(filter){
 function markActive(){
  const cur = decodeURIComponent(location.hash.slice(1));
  side.querySelectorAll('a').forEach(a=>a.classList.toggle('on', decodeURIComponent(a.dataset.t||'')===cur));
+ const on = side.querySelector('a.on');
+ if(on){
+  const w = on.closest('.grpwrap');
+  if(w && w.style.display==='none'){
+   w.style.display=''; const g=w.previousElementSibling;
+   if(g && g.classList.contains('grp')){ g.classList.add('open'); const tw=g.querySelector('.tw'); if(tw) tw.textContent='▾'; }
+  }
+ }
 }
 function chip(list){
  return '<div class="chips">'+list.map(t=>P[t]?`<a href="#${encodeURIComponent(t)}">${t}</a>`:'').join('')+'</div>';
@@ -318,6 +337,17 @@ function render(){
 q.addEventListener('input', ()=>buildSide(q.value));
 q.addEventListener('keydown', e=>{ if(e.key==='Enter'){ const a=side.querySelector('a'); if(a) location.hash=a.getAttribute('href'); }});
 window.addEventListener('hashchange', render);
+// ---- 目次: 五十音の行見出しを押すと開閉（アコーディオン） ----
+side.addEventListener('click', e=>{
+ const g = e.target.closest('.grp');
+ if(!g) return;
+ const w = g.nextElementSibling;
+ if(!w || !w.classList.contains('grpwrap')) return;
+ const show = w.style.display === 'none';
+ w.style.display = show ? '' : 'none';
+ g.classList.toggle('open', show);
+ const tw = g.querySelector('.tw'); if(tw) tw.textContent = show ? '▾' : '▸';
+});
 // ---- モバイル：目次ドロワーの開閉 ----
 const menu=document.getElementById('menu');
 const isMobile=()=>matchMedia('(max-width:820px)').matches;
