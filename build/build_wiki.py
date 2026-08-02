@@ -124,10 +124,70 @@ for t, pg in pages.items():
         "links": pg["links"], "back": backlinks[t],
     }
 
-# カテゴリ別インデックス
+# ---- 目次: 五十音（ア行/カ行…）＋A–Z＋数字＋その他 でグループ化 ----
+# 漢字・記号始まりの項目は読みを与える（未登録は自動判定＝先頭文字で分類）
+YOMI = {
+ # 公演
+ "天下一武狼会シリーズ":"てんかいちぶろうかいしりーず","失われた天下一武狼会 第4回の記憶":"うしなわれたてんかいちぶろうかい",
+ "怪獣":"かいじゅう","現代版天下一武狼会":"げんだいばんてんかいちぶろうかい",
+ "銀河鉄道の夜 赤":"ぎんがてつどうのよるあか","銀河鉄道の夜 青":"ぎんがてつどうのよるあお",
+ # 人物
+ "三田村以外の新入生ほか":"みたむらいがいのしんにゅうせい","三田村（ミコ）":"みたむら","中島":"なかじま","中田":"なかた",
+ "亜理紗は大変なものを盗んでいきました":"ありさはたいへんなものをぬすんでいきました","人狼ルームGM・レジェンド勢":"じんろうるーむじーえむ",
+ "伊藤":"いとう","大野":"おおの","家政婦の・ミタ":"かせいふのみた","最長老":"さいちょうろう",
+ "月の狼男（ストレンジディックス）":"つきのおおかみおとこ","村中":"むらなか","森本":"もりもと","真由美":"まゆみ",
+ "結":"ゆい","脇脇脇男":"わきわきわきお","藤澤":"ふじさわ","蛍原徹":"けいばらとおる","阿部洸希":"あべこうき",
+ "音楽と政治、両方尊重♥":"おんがくとせいじりょうほうそんちょう","香川":"かがわ",
+ "魔理沙は大変なものを盗んでいきました":"まりさはたいへんなものをぬすんでいきました","（FELLOWS一同）":"ふぇろーずいちどう",
+ # キーワード
+ "「君の魔法」":"きみのまほう","人造人間（にゃんぽ子／ドクターペロ）":"じんぞうにんげん","占いジジ":"うらないじじ",
+ "天下一武狼会／MTF・SMTF":"てんかいちぶろうかい","悪いAI（宇宙外生命体）":"わるいえーあい",
+ "感情検閲AI「IJ」／イジュニア":"かんじょうけんえつ","改名メタ（2024年3月〜）（用語）":"かいめいめた",
+ "阿部仲田クラス":"あべなかたくらす","青森／ハピゲ":"あおもり",
+ # 設定
+ "人狼ルーム":"じんろうるーむ","合言葉「We are FELLOWS!!」":"あいことば","悪いAI地球襲来事変（2043年）":"わるいえーあいちきゅう",
+ "改名メタ（2024年3月〜）":"かいめいめた","青森 ・ ハピゲ":"あおもり",
+ # 年表
+ "正史年表":"せいしねんぴょう","現実の開催史":"げんじつのかいさいし","調べるリスト":"しらべるりすと",
+}
+_ROWS = {
+ "ア行":"あいうえおぁぃぅぇぉゔ","カ行":"かきくけこがぎぐげごゕゖ","サ行":"さしすせそざじずぜぞ",
+ "タ行":"たちつてとだぢづでどっ","ナ行":"なにぬねの","ハ行":"はひふへほばびぶべぼぱぴぷぺぽ",
+ "マ行":"まみむめも","ヤ行":"やゆよゃゅょ","ラ行":"らりるれろ","ワ行":"わをんゎ",
+}
+CHAR2ROW = {ch: row for row, chars in _ROWS.items() for ch in chars}
+GROUP_ORDER = ["ア行","カ行","サ行","タ行","ナ行","ハ行","マ行","ヤ行","ラ行","ワ行","A–Z","数字","その他"]
+_STRIP = "「『（(【［〔｛{“”\"'’ 　・-—ー～"
+def to_hira(s):
+    out = []
+    for ch in s:
+        o = ord(ch)
+        out.append(chr(o - 0x60) if 0x30A1 <= o <= 0x30F6 else ch)
+    return "".join(out)
+def reading(title):
+    return to_hira(YOMI.get(title, title))
+def group_of(title):
+    r = reading(title).lstrip(_STRIP)
+    c = r[:1]
+    if c in CHAR2ROW: return CHAR2ROW[c]
+    if c and (("a" <= c.lower() <= "z")): return "A–Z"
+    if c and c.isdigit(): return "数字"
+    return "その他"
+def sortkey(title):
+    g = group_of(title)
+    return (GROUP_ORDER.index(g), reading(title).lstrip(_STRIP).lower(), title)
+
+GROUP_MIN = 8  # これ未満のカテゴリは五十音で分けず素の一覧にする
 index = {}
 for c in CAT_ORDER + ["HOME"]:
-    index[c] = sorted([t for t in data if data[t]["cat"] == c])
+    ts = sorted([t for t in data if data[t]["cat"] == c], key=sortkey)
+    if c == "HOME" or len(ts) < GROUP_MIN:
+        index[c] = [["", ts]]
+    else:
+        groups = {}
+        for t in ts:
+            groups.setdefault(group_of(t), []).append(t)
+        index[c] = [[g, groups[g]] for g in GROUP_ORDER if g in groups]
 
 payload = json.dumps({"pages": data, "index": index, "order": CAT_ORDER,
                       "icons": CAT_ICON}, ensure_ascii=False)
@@ -153,6 +213,7 @@ header .logo b{color:var(--accent)}
 .wrap{display:grid;grid-template-columns:260px 1fr;gap:0;min-height:calc(100vh - 58px)}
 #side{border-right:1px solid var(--line);padding:14px 10px;overflow:auto;max-height:calc(100vh - 58px);position:sticky;top:58px}
 #side h4{margin:14px 8px 6px;font-size:12px;color:var(--muted);letter-spacing:.05em}
+#side .grp{margin:7px 8px 1px;font-size:10px;color:var(--purple);letter-spacing:.1em;font-weight:700;opacity:.85}
 #side a{display:block;padding:4px 8px;border-radius:6px;color:var(--text);font-size:13px}
 #side a:hover{background:var(--panel);text-decoration:none}
 #side a.on{background:var(--accent);color:#fff}
@@ -204,21 +265,27 @@ footer{color:var(--muted);font-size:12px;padding:16px 34px;border-top:1px solid 
  <nav id="side"></nav>
  <main id="main"></main>
 </div>
-<footer>FELLOWS貸切 / FELLOWS学園 資料Wiki — Obsidian金庫から自動生成。項目は相互リンクしています。</footer>
+<footer>FELLOWS貸切 / フェローズ学園 資料Wiki — Obsidian金庫から自動生成。項目は相互リンクしています。</footer>
 <script>
 const DB = __PAYLOAD__;
 const P = DB.pages, IDX = DB.index, ICON = DB.icons;
 const side = document.getElementById('side'), main = document.getElementById('main'), q = document.getElementById('q');
 
 function buildSide(filter){
- filter = (filter||'').trim();
+ filter = (filter||'').trim().toLowerCase();
  let h = '';
  for(const c of DB.order){
-  let items = IDX[c]||[];
-  if(filter) items = items.filter(t => t.toLowerCase().includes(filter.toLowerCase()));
-  if(!items.length) continue;
-  h += `<h4>${ICON[c]||''} ${c}（${items.length}）</h4>`;
-  for(const t of items) h += `<a href="#${encodeURIComponent(t)}" data-t="${encodeURIComponent(t)}">${t}</a>`;
+  const groups = IDX[c]||[];
+  let inner = '', total = 0;
+  for(const [label, items] of groups){
+   const its = filter ? items.filter(t => t.toLowerCase().includes(filter)) : items;
+   if(!its.length) continue;
+   total += its.length;
+   if(label) inner += `<div class="grp">${label}</div>`;
+   for(const t of its) inner += `<a href="#${encodeURIComponent(t)}" data-t="${encodeURIComponent(t)}">${t}</a>`;
+  }
+  if(!total) continue;
+  h += `<h4>${ICON[c]||''} ${c}（${total}）</h4>` + inner;
  }
  side.innerHTML = h || '<p style="color:var(--muted);padding:8px">該当なし</p>';
  markActive();
