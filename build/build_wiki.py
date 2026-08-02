@@ -64,6 +64,9 @@ def inline(s):
         return f'<span class="wl dead">{esc(label)}</span>'
     s = re.sub(r'\[\[([^\]]+)\]\]', link, s)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
+    # 生URL（http/https）を外部リンク化（参考リンク用）
+    s = re.sub(r'(?<!["\'>])(https?://[^\s、。」）)＞<]+)',
+               r'<a href="\1" target="_blank" rel="noopener">\1</a>', s)
     return s
 
 def md2html(body):
