@@ -186,11 +186,14 @@ for e in db["events"]:
     cast_links = []
     seen_disp = set()
     for raw in e.get("chars", []):
-        cn = canon_for(raw)
-        node = cn if cn else link_name(raw)
+        disp = cast_clean(raw)          # その回で使われた表記（as-played）を優先表示
+        # 「キャラ名（中の人：本人）」形式：リンク/一覧の対象はキャラ名（本人は一覧に入れない）
+        mm = re.search(r'（中の人[:：][^）]+）', disp)
+        key = disp[:mm.start()].strip() if mm else raw
+        cn = canon_for(key)
+        node = cn if cn else link_name(key)
         if node and node not in cast_nodes:
             cast_nodes.append(node)
-        disp = cast_clean(raw)          # その回で使われた表記（as-played）を優先表示
         if not disp or disp in seen_disp:
             continue
         seen_disp.add(disp)
