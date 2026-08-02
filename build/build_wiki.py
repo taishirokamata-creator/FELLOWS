@@ -204,7 +204,7 @@ footer{color:var(--muted);font-size:12px;padding:16px 34px;border-top:1px solid 
  <nav id="side"></nav>
  <main id="main"></main>
 </div>
-<footer>FELLOWS貸切 / フェローズ学園 資料Wiki — Obsidian金庫から自動生成。項目は相互リンクしています。</footer>
+<footer>FELLOWS貸切 / FELLOWS学園 資料Wiki — Obsidian金庫から自動生成。項目は相互リンクしています。</footer>
 <script>
 const DB = __PAYLOAD__;
 const P = DB.pages, IDX = DB.index, ICON = DB.icons;
