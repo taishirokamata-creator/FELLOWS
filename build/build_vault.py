@@ -35,7 +35,7 @@ SHORT = {
  "ginga-red":"銀河鉄道の夜 赤","ginga-blue":"銀河鉄道の夜 青","fourth":"なぞの四人目の男",
  "tenka":"天下一武狼会シリーズ","naoki-close":"NAOKI CLOSE","valentine":"バレンタイン告白大作戦人狼",
  "gakuenz":"FELLOWS学園Z","kaiju":"怪獣",
- "tenka4":"失われた天下一武狼会 第4回の記憶",
+ "tenka4":"失われた天下一武狼会 第4回の記憶","tenka-gendai":"現代版天下一武狼会",
 }
 CONNECT = {
  "story-sep":["keyagu"], "story-oct":["story-sep"], "shino":["future","space","naoki"],
@@ -46,12 +46,12 @@ CONNECT = {
  "keyagu":["thishistory","story-sep"],
  "nakama":["keyagu","thishistory"], "nameku":["future","getback","tenka4"], "naoki-close":["naoki"],
  "ginga-red":["ginga-blue"], "ginga-blue":["ginga-red"],
- "tenka":["tenka4"], "tenka4":["tenka","future","nameku"],
+ "tenka":["tenka4","tenka-gendai"], "tenka4":["tenka","future","nameku","tenka-gendai"], "tenka-gendai":["tenka","tenka4"],
 }
 # 作中年表/HOMEで公演を並べる順（新規は末尾に）
 STORY_ORDER = ["story-sep","story-oct","nakama","shino","meison","xmas","special","openeyes",
  "lastxmas","lastxmas-remake","never","space","naoki","naoki-close","moon","future","nameku",
- "getback","fourth","ginga-red","ginga-blue","tenka","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu"]
+ "getback","fourth","ginga-red","ginga-blue","tenka-gendai","tenka","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu"]
 ev_by_id = {e["id"]: e for e in db["events"]}
 
 # ---------- 人物: 正規名 & エイリアス（イベント配役の突合用） ----------

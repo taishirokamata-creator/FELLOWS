@@ -1199,6 +1199,41 @@ const DATA = {
       "connects": [
         "フェロウズ、未来へ"
       ]
+    },
+    {
+      "id": "tenka-gendai",
+      "title": "現代版天下一武狼会 ～最強のFELLOWS～",
+      "series": "FELLOWS学園（天下一武狼会）",
+      "real_date": "2025年1月29日（第36回 XXXⅥ）",
+      "iu_date": "2025年（現実の称号戦）＋XX年後（学園編）",
+      "logline": "現代版天下一武狼会で『最強のFELLOWS』を決定。XX年後の学園編は、新入生まる。を阿部おじが旅へ連れ出す送別回（現実にはメンバー石丸さんの旅立ち）。",
+      "synopsis": "二部構成。まず現実の天下一武狼会で『最強のFELLOWS』の称号を争う。XX年後、学園長しのぴ主催の学園版・天下一武狼会（GM＝しのぴ、オープンルール＝人狼3・狂人1・他村人）。YouTubeを見て入学した新入生『まる。』（南の島出身、賞金で両親を喜ばせたい）が緊張で実力を出せずにいたが、悪役ムーブで場をほぐそうとする面々、特ににゃんぽ子の母親いじりに覚醒し、的確な推理を連発。終身名誉GM阿部洸希おじが『まる。』の可能性を見抜き『まる。を連れて旅に出る』と宣言、FELLOWS一同で南の島＝まる。の家へ旅立つ。締めは全員で『We are… FELLOWS!!!』。現実には本公演がメンバー石丸さん（＝新入生まる。）の送別回。",
+      "chars": [
+        "学園長しのぴ",
+        "終身名誉GM阿部洸希おじ",
+        "まる。（新入生・南の島出身／＝石丸さん）",
+        "にゃんぽ子",
+        "まぐろ",
+        "ルイ144世",
+        "ヘンリー王子（ヘンリー・チャールズ・アルバート・デイヴィット）",
+        "イム・スヒョン",
+        "みのミュージック",
+        "ハマ・ヤンクミ",
+        "クニタケチユキ",
+        "アウトオブウメコ",
+        "ひこにゃ～",
+        "マJr.",
+        "脇脇脇男"
+      ],
+      "world": [
+        "現代版天下一武狼会『最強のFELLOWS』の称号",
+        "学園版・天下一武狼会（GM＝学園長しのぴ／オープンルール 人狼3・狂人1）",
+        "新入生まる。の旅立ち（＝メンバー石丸さんの送別）"
+      ],
+      "connects": [
+        "天下一武狼会シリーズ",
+        "失われた天下一武狼会 第4回の記憶"
+      ]
     }
   ],
   "chars": [
@@ -1709,7 +1744,7 @@ function chips(arr,cls){return '<div class="chips">'+arr.map(x=>'<span class="ch
 
 // ---- Story timeline (explicit in-universe order) ----
 const ORDER=['story-sep','story-oct','shino','meison','xmas','special','openeyes',
-  'lastxmas','lastxmas-remake','never','space','naoki','moon','future','thishistory','keyagu','nakama','naoki-close','fourth','ginga-red','ginga-blue','tenka','tenka4','getback','valentine','gakuenz','kaiju','nameku'];
+  'lastxmas','lastxmas-remake','never','space','naoki','moon','future','thishistory','keyagu','nakama','naoki-close','fourth','ginga-red','ginga-blue','tenka-gendai','tenka','tenka4','getback','valentine','gakuenz','kaiju','nameku'];
 const evs=[...DATA.events].sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id));
 document.getElementById('story-tl').innerHTML = evs.map(e=>{
   const sup = (e.id==='thishistory'||e.id==='keyagu');
@@ -1787,9 +1822,10 @@ const PEOPLE = [
    "なぞの四人目の男",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼",
-   "FELLOWS学園Z"
+   "FELLOWS学園Z",
+   "現代版天下一武狼会"
   ],
-  "n": 20,
+  "n": 21,
   "kin": [
    "にゃんぽ子",
    "ギャラガー"
@@ -1818,9 +1854,10 @@ const PEOPLE = [
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼",
    "FELLOWS学園Z",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 18,
+  "n": 19,
   "kin": [],
   "authored": true
  },
@@ -1845,9 +1882,10 @@ const PEOPLE = [
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼",
    "FELLOWS学園Z",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 17,
+  "n": 18,
   "kin": [
    "しのぴ"
   ],
@@ -1874,9 +1912,10 @@ const PEOPLE = [
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼",
    "FELLOWS学園Z",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 17,
+  "n": 18,
   "kin": [],
   "authored": true
  },
@@ -1900,9 +1939,10 @@ const PEOPLE = [
    "FELLOWS、ナメック星へ",
    "Get Back",
    "バレンタイン告白大作戦人狼",
-   "FELLOWS学園Z"
+   "FELLOWS学園Z",
+   "現代版天下一武狼会"
   ],
-  "n": 16,
+  "n": 17,
   "kin": [],
   "authored": true
  },
@@ -1925,9 +1965,10 @@ const PEOPLE = [
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼",
    "FELLOWS学園Z",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 15,
+  "n": 16,
   "kin": [],
   "authored": true
  },
@@ -1950,9 +1991,10 @@ const PEOPLE = [
    "FELLOWS、ナメック星へ",
    "Get Back",
    "バレンタイン告白大作戦人狼",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 15,
+  "n": 16,
   "kin": [],
   "authored": true
  },
@@ -1975,9 +2017,10 @@ const PEOPLE = [
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦人狼",
    "FELLOWS学園Z",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 15,
+  "n": 16,
   "kin": [],
   "authored": true
  },
@@ -2022,9 +2065,10 @@ const PEOPLE = [
    "FELLOWS、ナメック星へ",
    "Get Back",
    "なぞの四人目の男",
-   "FELLOWS学園Z"
+   "FELLOWS学園Z",
+   "現代版天下一武狼会"
   ],
-  "n": 11,
+  "n": 12,
   "kin": [
    "ア・バイバイ",
    "ガッツ石松"
@@ -2044,9 +2088,10 @@ const PEOPLE = [
    "オープン・ザ・アイズ",
    "FELLOWS、宇宙へ",
    "NAOKI EMPIRE INVASION",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 9,
+  "n": 10,
   "kin": [],
   "authored": true
  },
@@ -2063,9 +2108,10 @@ const PEOPLE = [
    "銀河鉄道の夜 赤",
    "銀河鉄道の夜 青",
    "なぞの四人目の男",
-   "FELLOWS学園Z"
+   "FELLOWS学園Z",
+   "現代版天下一武狼会"
   ],
-  "n": 9,
+  "n": 10,
   "kin": [
    "なおき"
   ],
@@ -2083,9 +2129,10 @@ const PEOPLE = [
    "ケヤグセカイ",
    "Get Back",
    "バレンタイン告白大作戦人狼",
-   "怪獣"
+   "怪獣",
+   "現代版天下一武狼会"
   ],
-  "n": 8,
+  "n": 9,
   "kin": [],
   "authored": true
  },
@@ -2099,9 +2146,10 @@ const PEOPLE = [
    "FELLOWSスペシャル人狼",
    "オープン・ザ・アイズ",
    "ラストクリスマスの逆襲",
-   "バレンタイン告白大作戦人狼"
+   "バレンタイン告白大作戦人狼",
+   "現代版天下一武狼会"
   ],
-  "n": 6,
+  "n": 7,
   "kin": [],
   "authored": true
  },
@@ -2935,6 +2983,17 @@ const PEOPLE = [
   "desc": "",
   "events": [
    "FELLOWS、ナメック星へ"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "マJr.",
+  "gen": "端役",
+  "desc": "",
+  "events": [
+   "現代版天下一武狼会"
   ],
   "n": 1,
   "kin": [],
