@@ -236,8 +236,8 @@ for e in db["events"]:
             node_appears[node].append(e["id"])
     conn = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in CONNECT.get(e["id"], []))
     wl = " / ".join(f"[[{sanitize(wdisp(wk))}]]" for wk in worlds_for_event(e))
-    chant = str(e.get("chant", "")).strip()   # 掛け声（分かる回だけ・担当が分かれば「（担当：〇〇）」）
-    chant_line = f"　｜　**掛け声**：{chant}" if chant else ""
+    # 掛け声（We are FELLOWS!!）は独立メタ行にせず、あらすじ末尾に「担当」として記載する方針（2026-08-02）。
+    # 担当が分かる回だけ synopsis 末尾に「最後の掛け声「We are FELLOWS!!」は〇〇が担当。」を書く（不明なら書かない＝？は残さない）。
     body = f"""---
 type: 公演
 aliases: ["{e['title']}"]
@@ -249,7 +249,7 @@ tags: [公演, FELLOWS]
 > [!quote] {e['logline']}
 
 **シリーズ**：{e['series']}
-**現実の開催日**：{e['real_date']}　｜　**作中年代**：{e['iu_date']}{chant_line}
+**現実の開催日**：{e['real_date']}　｜　**作中年代**：{e['iu_date']}
 
 ## あらすじ
 {e['synopsis']}
@@ -276,11 +276,20 @@ def kind_of(node):
 def kind_badge(k):
     return "👤 本人" if k == "本人" else "🎭 作中キャラ"
 
+# 血縁の逆引き：子→親（kin）を親側にも出して双方向リレーションにする
+reverse_kin = {}
+for _a, _m in CHARS.items():
+    for _b in _m.get("kin", []):
+        reverse_kin.setdefault(_b, [])
+        if _a not in reverse_kin[_b]:
+            reverse_kin[_b].append(_a)
+
 # ---------- 生成: 人物ノート（主要＝リッチ） ----------
 for name, meta in CHARS.items():
     kind = meta.get("kind", "キャラ")
     apps = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in node_appears.get(name, appears.get(name, [])))
-    kin = " / ".join(f"[[{sanitize(k)}]]" for k in meta["kin"]) if meta["kin"] else "—"
+    kin_all = list(dict.fromkeys(list(meta["kin"]) + reverse_kin.get(name, [])))
+    kin = " / ".join(f"[[{sanitize(k)}]]" for k in kin_all) if kin_all else "—"
     body = f"""---
 type: 人物
 区分: {kind}
@@ -312,6 +321,8 @@ for node, evids in sorted(node_appears.items()):
         continue
     kind = kind_of(node)
     apps = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in evids)
+    rk = reverse_kin.get(node, [])
+    kin_sec = ("\n## 血縁・関連人物\n" + " / ".join(f"[[{sanitize(k)}]]" for k in rk) + "\n\n") if rk else "\n"
     body = f"""---
 type: 人物
 区分: {kind}
@@ -319,8 +330,7 @@ tags: [人物, FELLOWS, {kind}]
 ---
 # {node}
 **{kind_badge(kind)}**
-
-## 出演公演
+{kin_sec}## 出演公演
 {apps}
 
 ---
