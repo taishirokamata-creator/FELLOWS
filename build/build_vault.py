@@ -209,8 +209,8 @@ for e in db["events"]:
             node_appears[node].append(e["id"])
     conn = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in CONNECT.get(e["id"], []))
     wl = " / ".join(f"[[{sanitize(wdisp(wk))}]]" for wk in worlds_for_event(e))
-    chant = str(e.get("chant", "")).strip()   # 掛け声担当（分かる回だけ）
-    chant_line = f"　｜　**掛け声担当**：{chant}" if chant else ""
+    chant = str(e.get("chant", "")).strip()   # 掛け声（分かる回だけ・担当が分かれば「（担当：〇〇）」）
+    chant_line = f"　｜　**掛け声**：{chant}" if chant else ""
     body = f"""---
 type: 公演
 aliases: ["{e['title']}"]
