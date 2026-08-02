@@ -23,8 +23,8 @@
 
 | 種類 | URL / 場所 | 中身 |
 |---|---|---|
-| 🐺 年表サイト（公開） | https://taishirokamata-creator.github.io/FELLOWS/ | 作中年表(線表)＋現実の開催史＋人物名鑑(個別キャラ約107・検索/クリック詳細) |
-| 📚 用語Wiki（公開） | https://taishirokamata-creator.github.io/FELLOWS/wiki.html | Wikipedia風 約175ページ。カテゴリ=年表/公演/キャラクター/用語集。左目次は五十音アコーディオン。スマホは「☰ 目次」 |
+| 🐺 年表サイト（公開） | https://taishirokamata-creator.github.io/FELLOWS/ | 作中年表(線表)＋現実の開催史＋人物名鑑(個別キャラ約154・検索/クリック詳細) |
+| 📚 用語Wiki（公開） | https://taishirokamata-creator.github.io/FELLOWS/wiki.html | Wikipedia風 約218ページ。カテゴリ=年表/公演/キャラクター/用語集。左目次は五十音アコーディオン。スマホは「☰ 目次」 |
 | 年表（限定共有・非公開） | Claude Artifact `5674cfb9-ee40-4436-9628-b0cbfc75fa63` | GitHub版と同じ。内輪限定で配りたい時用 |
 | Wiki（限定共有・非公開） | Claude Artifact `ca904966-7ce4-45e2-b3ba-fc1d1f606a75` | 同上 |
 
@@ -50,7 +50,7 @@
     ├── README.md / .nojekyll / .gitignore
     ├── data/
     │   ├── fellows_db.json         ★★ 一次データ＝すべての正（single source of truth）
-    │   └── people_index.json       … 個別キャラ約107件の索引（build_vault.py が自動生成）
+    │   └── people_index.json       … 個別キャラ約154件の索引（kind=本人/キャラ付き・build_vault.py が自動生成）
     ├── build/                      … ビルドスクリプト一式（← 今回ここに集約）
     │   ├── build_all.py            … ★ワンコマンド一括ビルド
     │   ├── build_vault.py          … fellows_db.json → Obsidian金庫 ＋ people_index.json
@@ -83,7 +83,8 @@ data/fellows_db.json  ──┬─→ build_vault.py ─→ FELLOWS_Vault/（Obs
 ### fellows_db.json の構造（主なキー）
 - `canon[]` … 正史の大年表（年・タイトル・detail・tag）
 - `events[]` … 公演（id / title / series / real_date / iu_date / logline / synopsis / chars[] / world[] / connects[]）
-- `chars[]` … 人物名鑑の「まとめ」記述（世代グループ単位）※個別105人は people_index.json 側
+- `chars[]` … 人物名鑑の「まとめ」記述（index.html 用）※個別キャラ約154件は people_index.json 側
+- `events[].chant` … 掛け声（分かる回のみ。例：We are FELLOWS!!）
 - `world[]` … 世界観設定（k / v）
 - `keywords[]` … 特殊用語（k / v / see[]）
 - `open_questions[]` … （旧）未確定リスト。**運用停止**（2026-08-02〜）。不確かは本文に「？」＋修正リストTSV/スプレッドシートへ集約（Wikiの「調べるリスト」ページも廃止）。
@@ -92,12 +93,13 @@ data/fellows_db.json  ──┬─→ build_vault.py ─→ FELLOWS_Vault/（Obs
 - `SHORT` … event id → 短縮タイトル
 - `CONNECT` … event id → 関連 event id[]（金庫の「つながり」）
 - `STORY_ORDER` … 作中年代順の並び
-- `CHARS` … 主要人物の正規名・エイリアス・血縁・説明（リッチな人物ノートの元）
-  - `canon_for()` が配役表記を CHARS のエイリアスで正規名へ寄せる
-  - CHARS に無い配役は「端役/脇役」ノートを自動生成
+- `CHARS` … 人物の正規名・`kind`(本人/キャラ)・エイリアス・血縁・説明。**本人（親）と作中キャラ（子）は別エントリ**（にゃんぽこ/にゃんぽ子 等）。まとめエントリは作らない（全員個別）。
+  - `PERSON_ROSTER`（参加者ランキングPDF＝実在プレイヤー/GM）に載る名前＝本人。CHARS外の配役は既定でキャラ。「端役/脇役」は使わない。
+  - `canon_for()` が配役トークンを CHARS のエイリアスで正規名へ寄せる（配役の表記で本人/キャラを自動振り分け）。CHARS外は `link_name()` でノート化。
+  - 公演に `chant`（掛け声）フィールドがあれば公演ページのメタ行に表示（例：We are FELLOWS!!）。
 - 参考：index.html 側にも作中順の `ORDER` 配列がある（新公演を足したらここにも id を追加）
 - カテゴリ名は 公演／キャラクター／用語集／年表（旧「人物」→キャラクター、「設定＋キーワード」→用語集）。Wiki左目次は五十音アコーディオン（漢字始まりは `build_wiki.py` の `YOMI` に読みを足す）。
-- 公演ページの配役は「その回の表記(as-played)」で表示。キャラを演じた回は `キャラ名（中の人：本人）`＋`[[正規名|表示名]]`。本人名義は一覧に別出ししない（詳細＝REVIEW_GUIDE §5）。
+- 公演ページの配役は「その回の表記(as-played)」で表示。キャラを演じた回は `キャラ名（中の人：本人）`＋`[[正規名|表示名]]`。**本人も作中キャラも両方キャラクター一覧に載せ、👤本人/🎭作中キャラ で区分**（詳細＝REVIEW_GUIDE §5）。
 
 ---
 
