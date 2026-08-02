@@ -29,7 +29,7 @@ SHORT = {
  "meison":"メイソン編","xmas":"サンタ人狼（クリスマス編）","special":"FELLOWSスペシャル人狼",
  "openeyes":"オープン・ザ・アイズ","lastxmas":"ラストクリスマスの逆襲","lastxmas-remake":"ラストクリスマスの逆襲 リメイク",
  "space":"FELLOWS、宇宙へ","naoki":"NAOKI EMPIRE INVASION","moon":"フェロウズ、月へ",
- "future":"フェロウズ、未来へ","never":"NEVER！NEVER！NEVER！","thishistory":"This is history","keyagu":"ケヤグセカイ",
+ "future":"フェロウズ、未来へ","never":"NEVER！NEVER！NEVER！","thishistory":"This is history, this is history, right here, right now, this is history","keyagu":"ケヤグセカイ",
  # ---- 今回追加の公演 ----
  "nakama":"ナカマセカイ","nameku":"FELLOWS、ナメック星へ","getback":"Get Back",
  "ginga-red":"銀河鉄道の夜 赤","ginga-blue":"銀河鉄道の夜 青","fourth":"なぞの四人目の男",

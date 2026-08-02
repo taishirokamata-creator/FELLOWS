@@ -16,7 +16,7 @@
    "FELLOWS、宇宙へ",
    "フェロウズ、未来へ",
    "NEVER！NEVER！NEVER！",
-   "This is history",
+   "This is history, this is history, right here, right now, this is history",
    "ケヤグセカイ",
    "FELLOWS、ナメック星へ",
    "Get Back",
@@ -261,7 +261,7 @@
    "シノの魂",
    "メイソン編",
    "ラストクリスマスの逆襲 リメイク",
-   "This is history",
+   "This is history, this is history, right here, right now, this is history",
    "ケヤグセカイ",
    "FELLOWS、ナメック星へ",
    "Get Back",
@@ -304,7 +304,7 @@
    "ストーリー人狼9月編",
    "ハロウィン人狼（10月編）",
    "シノの魂",
-   "This is history",
+   "This is history, this is history, right here, right now, this is history",
    "Get Back",
    "銀河鉄道の夜 赤",
    "銀河鉄道の夜 青",
@@ -506,7 +506,7 @@
   "events": [
    "サンタ人狼（クリスマス編）",
    "ラストクリスマスの逆襲",
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 3,
   "kin": [],
@@ -616,7 +616,7 @@
   "desc": "人狼ルーム専属プレイヤーの自由人レジェンド。カミングアウター村の考案者。",
   "events": [
    "メイソン編",
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 2,
   "kin": [],
@@ -1093,7 +1093,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1104,7 +1104,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1205,7 +1205,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1271,7 +1271,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1282,7 +1282,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1326,7 +1326,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1337,7 +1337,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1359,7 +1359,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1370,7 +1370,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
@@ -1403,7 +1403,7 @@
   "gen": "端役",
   "desc": "",
   "events": [
-   "This is history"
+   "This is history, this is history, right here, right now, this is history"
   ],
   "n": 1,
   "kin": [],
