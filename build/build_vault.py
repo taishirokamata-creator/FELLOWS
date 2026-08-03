@@ -26,7 +26,7 @@ def w(folder, fname, text):
 # ---------- 公演: 短縮タイトル & 接続マップ ----------
 SHORT = {
  "story-sep":"FELLOWS貸切誕生！","story-oct":"ハロウィン人狼（10月編）","shino":"シノの魂",
- "meison":"メイソン編","xmas":"クリスマス編","special":"FELLOWS学園新年会",
+ "meison":"FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）","xmas":"FELLOWS学園の人狼（クリスマス編）","special":"FELLOWS学園新年会",
  "openeyes":"オープン・ザ・アイズ","lastxmas":"ラストクリスマスの逆襲","lastxmas-remake":"ラストクリスマスの逆襲 リメイク",
  "space":"FELLOWS、宇宙へ","naoki":"NAOKI EMPIRE INVASION","moon":"フェロウズ、月へ",
  "future":"フェロウズ、未来へ","never":"NEVER！NEVER！NEVER！","thishistory":"This is history, this is history, right here, right now, this is history","keyagu":"ケヤグセカイ",
