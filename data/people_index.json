@@ -15,7 +15,7 @@
    "This is history, this is history, right here, right now, this is history",
    "ケヤグセカイ",
    "FELLOWS、ナメック星へ",
-   "replica/get back",
+   "replica／get back",
    "なぞの四人目の男",
    "FELLOWS学園Z",
    "現代版天下一武狼会"
@@ -146,7 +146,7 @@
    "This is history, this is history, right here, right now, this is history",
    "ケヤグセカイ",
    "FELLOWS、ナメック星へ",
-   "replica/get back",
+   "replica／get back",
    "なぞの四人目の男",
    "FELLOWS学園Z",
    "現代版天下一武狼会"
@@ -338,7 +338,7 @@
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back",
+   "replica／get back",
    "なぞの四人目の男"
   ],
   "n": 6,
@@ -371,7 +371,7 @@
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 5,
   "kin": [],
@@ -403,7 +403,7 @@
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 5,
   "kin": [],
@@ -419,7 +419,7 @@
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 5,
   "kin": [],
@@ -468,7 +468,7 @@
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back",
+   "replica／get back",
    "なぞの四人目の男"
   ],
   "n": 5,
@@ -500,7 +500,7 @@
    "FELLOWS貸切誕生！",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 4,
   "kin": [],
@@ -515,7 +515,7 @@
    "FELLOWS貸切誕生！",
    "シノの魂",
    "ケヤグセカイ",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 4,
   "kin": [],
@@ -605,7 +605,7 @@
   "events": [
    "ハロウィン人狼（10月編）",
    "ケヤグセカイ",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 3,
   "kin": [],
@@ -782,7 +782,7 @@
   "gen": "本人",
   "desc": "",
   "events": [
-   "replica/get back",
+   "replica／get back",
    "なぞの四人目の男"
   ],
   "n": 2,
@@ -795,7 +795,7 @@
   "gen": "本人",
   "desc": "",
   "events": [
-   "replica/get back",
+   "replica／get back",
    "銀河鉄道の夜 赤"
   ],
   "n": 2,
@@ -861,7 +861,7 @@
   "desc": "人狼ルームのGM。",
   "events": [
    "FELLOWS貸切誕生！",
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 2,
   "kin": [],
@@ -1411,7 +1411,7 @@
   "gen": "本人",
   "desc": "",
   "events": [
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 1,
   "kin": [],
@@ -1435,7 +1435,7 @@
   "gen": "本人",
   "desc": "",
   "events": [
-   "replica/get back"
+   "replica／get back"
   ],
   "n": 1,
   "kin": [],

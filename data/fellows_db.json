@@ -761,13 +761,13 @@
       ],
       "connects": [
         "フェロウズ、未来へ",
-        "replica/get back"
+        "replica／get back"
       ],
       "chant": "We are FELLOWS!!"
     },
     {
       "id": "getback",
-      "title": "replica/get back",
+      "title": "replica／get back",
       "series": "ストーリー人狼（起源リメイク）",
       "real_date": "2024年6月19日",
       "iu_date": "（現実世界／2024）",
@@ -1532,7 +1532,7 @@
       "k": "ドラゴンボール／神龍／ジャストワン",
       "v": "Get Back回の中核。7つのドラゴンボールを集め神龍に願い、条件の協力ゲーム『ジャストワン』を成功させる。ジャストワンは9月編でも登場。",
       "see": [
-        "replica/get back",
+        "replica／get back",
         "FELLOWS貸切誕生！"
       ]
     },
