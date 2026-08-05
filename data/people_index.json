@@ -18,9 +18,12 @@
    "replica／get back",
    "なぞの四人目の男",
    "FELLOWS学園Z",
-   "現代版天下一武狼会"
+   "現代版天下一武狼会",
+   "Simulation #100",
+   "クロノス・プロトコル",
+   "FELLOWS外伝 ―Believe―"
   ],
-  "n": 14,
+  "n": 17,
   "kin": [
    "学園長しのぴ",
    "にゃんぽこ"
@@ -46,9 +49,10 @@
    "なぞの四人目の男",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
-   "怪獣"
+   "怪獣",
+   "クロノス・プロトコル"
   ],
-  "n": 14,
+  "n": 15,
   "kin": [
    "阿部洸希"
   ],
@@ -73,11 +77,65 @@
    "バレンタイン告白大作戦",
    "FELLOWS学園Z",
    "怪獣",
-   "現代版天下一武狼会"
+   "現代版天下一武狼会",
+   "クロノス・プロトコル"
+  ],
+  "n": 15,
+  "kin": [
+   "わっき〜"
+  ],
+  "authored": true
+ },
+ {
+  "name": "阿部洸希",
+  "kind": "本人",
+  "gen": "人狼ルームGM（レジェンド）",
+  "desc": "人狼ルームGM／終身名誉GM。学園のア・バイバイの祖父にあたる。",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
+   "ラストクリスマスの逆襲 リメイク",
+   "This is history, this is history, right here, right now, this is history",
+   "ケヤグセカイ",
+   "FELLOWS、ナメック星へ",
+   "replica／get back",
+   "なぞの四人目の男",
+   "FELLOWS学園Z",
+   "現代版天下一武狼会",
+   "Simulation #100",
+   "FELLOWS外伝 ―Believe―"
   ],
   "n": 14,
   "kin": [
-   "わっき〜"
+   "ア・バイバイ"
+  ],
+  "authored": true
+ },
+ {
+  "name": "クニタケチユキ",
+  "kind": "キャラ",
+  "gen": "学園の生徒",
+  "desc": "ちゆっきー（本人）の子。バンド THE FOREVER YOUNG（エバヤン）のボーカルという設定。元ネタはエバヤンのクニタケヒロキ。",
+  "events": [
+   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
+   "FELLOWS学園の人狼（クリスマス編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "フェロウズ、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "FELLOWS、ナメック星へ",
+   "バレンタイン告白大作戦",
+   "怪獣",
+   "現代版天下一武狼会",
+   "クロノス・プロトコル"
+  ],
+  "n": 13,
+  "kin": [
+   "ちゆっきー"
   ],
   "authored": true
  },
@@ -108,52 +166,27 @@
   "authored": true
  },
  {
-  "name": "クニタケチユキ",
+  "name": "アウトオブウメコ",
   "kind": "キャラ",
   "gen": "学園の生徒",
-  "desc": "ちゆっきー（本人）の子。バンド THE FOREVER YOUNG（エバヤン）のボーカルという設定。元ネタはエバヤンのクニタケヒロキ。",
+  "desc": "小梅（本人）の子。歴史改変でアウトオブウメコに。",
   "events": [
    "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
    "FELLOWS学園の人狼（クリスマス編）",
-   "オープン・ザ・アイズ",
+   "FELLOWS学園新年会",
    "ラストクリスマスの逆襲",
    "フェロウズ、宇宙へ",
    "NAOKI EMPIRE INVASION",
-   "フェロウズ、月へ",
-   "NEVER！NEVER！NEVER！",
-   "FELLOWS、ナメック星へ",
+   "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
-   "怪獣",
-   "現代版天下一武狼会"
-  ],
-  "n": 12,
-  "kin": [
-   "ちゆっきー"
-  ],
-  "authored": true
- },
- {
-  "name": "阿部洸希",
-  "kind": "本人",
-  "gen": "人狼ルームGM（レジェンド）",
-  "desc": "人狼ルームGM／終身名誉GM。学園のア・バイバイの祖父にあたる。",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
-   "ラストクリスマスの逆襲 リメイク",
-   "This is history, this is history, right here, right now, this is history",
-   "ケヤグセカイ",
-   "FELLOWS、ナメック星へ",
-   "replica／get back",
-   "なぞの四人目の男",
    "FELLOWS学園Z",
-   "現代版天下一武狼会"
+   "怪獣",
+   "現代版天下一武狼会",
+   "クロノス・プロトコル"
   ],
   "n": 12,
   "kin": [
-   "ア・バイバイ"
+   "小梅"
   ],
   "authored": true
  },
@@ -178,30 +211,6 @@
   "n": 11,
   "kin": [
    "マノ"
-  ],
-  "authored": true
- },
- {
-  "name": "アウトオブウメコ",
-  "kind": "キャラ",
-  "gen": "学園の生徒",
-  "desc": "小梅（本人）の子。歴史改変でアウトオブウメコに。",
-  "events": [
-   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
-   "FELLOWS学園の人狼（クリスマス編）",
-   "FELLOWS学園新年会",
-   "ラストクリスマスの逆襲",
-   "フェロウズ、宇宙へ",
-   "NAOKI EMPIRE INVASION",
-   "失われた天下一武狼会 第4回の記憶",
-   "バレンタイン告白大作戦",
-   "FELLOWS学園Z",
-   "怪獣",
-   "現代版天下一武狼会"
-  ],
-  "n": 11,
-  "kin": [
-   "小梅"
   ],
   "authored": true
  },
@@ -243,9 +252,10 @@
    "ナカマセカイ",
    "FELLOWS、ナメック星へ",
    "失われた天下一武狼会 第4回の記憶",
-   "バレンタイン告白大作戦"
+   "バレンタイン告白大作戦",
+   "クロノス・プロトコル"
   ],
-  "n": 9,
+  "n": 10,
   "kin": [
    "しの",
    "にゃんぽ子",
@@ -265,7 +275,44 @@
    "NEVER！NEVER！NEVER！",
    "FELLOWS、ナメック星へ",
    "失われた天下一武狼会 第4回の記憶",
-   "現代版天下一武狼会"
+   "現代版天下一武狼会",
+   "クロノス・プロトコル"
+  ],
+  "n": 8,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "うに",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "Simulation #100",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 7,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "にゃんぽこ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "なぞの四人目の男",
+   "Simulation #100",
+   "FELLOWS外伝 ―Believe―"
   ],
   "n": 7,
   "kin": [],
@@ -312,6 +359,24 @@
   "authored": true
  },
  {
+  "name": "マノ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "なぞの四人目の男",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 7,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "たくや",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -329,7 +394,24 @@
   "authored": false
  },
  {
-  "name": "マノ",
+  "name": "ちゆっきー",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "Simulation #100",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 6,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "わっき〜",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
@@ -339,9 +421,59 @@
    "シノの魂",
    "ケヤグセカイ",
    "replica／get back",
-   "なぞの四人目の男"
+   "FELLOWS外伝 ―Believe―"
   ],
   "n": 6,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イムラ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 6,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "小梅",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "なぞの四人目の男",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 6,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "J",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 5,
   "kin": [],
   "authored": false
  },
@@ -360,70 +492,6 @@
   "n": 5,
   "kin": [],
   "authored": true
- },
- {
-  "name": "うに",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back"
-  ],
-  "n": 5,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "にゃんぽこ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "なぞの四人目の男"
-  ],
-  "n": 5,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "わっき〜",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back"
-  ],
-  "n": 5,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "イムラ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back"
-  ],
-  "n": 5,
-  "kin": [],
-  "authored": false
  },
  {
   "name": "三田村ちゃん",
@@ -460,22 +528,6 @@
   "authored": true
  },
  {
-  "name": "小梅",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back",
-   "なぞの四人目の男"
-  ],
-  "n": 5,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "柏村",
   "kind": "本人",
   "gen": "人狼ルームGM",
@@ -490,36 +542,6 @@
   "n": 5,
   "kin": [],
   "authored": true
- },
- {
-  "name": "J",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back"
-  ],
-  "n": 4,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "ちゆっきー",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back"
-  ],
-  "n": 4,
-  "kin": [],
-  "authored": false
  },
  {
   "name": "イクラ",
@@ -598,6 +620,62 @@
   "authored": false
  },
  {
+  "name": "きむら",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "なぞの四人目の男",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "さっちん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "たくや！",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "フェロウズ、宇宙へ",
+   "失われた天下一武狼会 第4回の記憶",
+   "クロノス・プロトコル"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "のりちゃん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ひこにゃん",
   "kind": "本人",
   "gen": "本人",
@@ -654,6 +732,20 @@
   "authored": false
  },
  {
+  "name": "ワ・タックティックフッ・タグチ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "フェロウズ、宇宙へ",
+   "フェロウズ、月へ",
+   "クロノス・プロトコル"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "中田",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -668,17 +760,20 @@
   "authored": false
  },
  {
-  "name": "きむら",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
+  "name": "NAOKI",
+  "kind": "キャラ",
+  "gen": "AI",
+  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
   "events": [
-   "FELLOWS貸切誕生！",
-   "なぞの四人目の男"
+   "NAOKI EMPIRE INVASION",
+   "クロノス・プロトコル"
   ],
   "n": 2,
-  "kin": [],
-  "authored": false
+  "kin": [
+   "なおき",
+   "ギャラガー"
+  ],
+  "authored": true
  },
  {
   "name": "こたつ",
@@ -694,39 +789,41 @@
   "authored": false
  },
  {
-  "name": "さっちん",
+  "name": "なおき",
+  "kind": "本人",
+  "gen": "人狼ルームGM",
+  "desc": "人狼ルームのGM（元はスイーツ人狼ルームGM）。2025年に人狼ルームへ移籍→反発層が『スイーツ派』を結成。子孫がAI『NAOKI』を作る。",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "Simulation #100"
+  ],
+  "n": 2,
+  "kin": [
+   "NAOKI"
+  ],
+  "authored": true
+ },
+ {
+  "name": "ななまる",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
-   "ハロウィン人狼（10月編）",
-   "ケヤグセカイ"
+   "ケヤグセカイ",
+   "Simulation #100"
   ],
   "n": 2,
   "kin": [],
   "authored": false
  },
  {
-  "name": "たくや！",
+  "name": "はちお",
   "kind": "キャラ",
   "gen": "作中キャラ",
   "desc": "",
   "events": [
-   "フェロウズ、宇宙へ",
-   "失われた天下一武狼会 第4回の記憶"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "のりちゃん",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "ハロウィン人狼（10月編）",
-   "ケヤグセカイ"
+   "NAOKI EMPIRE INVASION",
+   "クロノス・プロトコル"
   ],
   "n": 2,
   "kin": [],
@@ -759,6 +856,19 @@
    "ひこにゃん"
   ],
   "authored": true
+ },
+ {
+  "name": "まりちゃん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ケヤグセカイ",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
  },
  {
   "name": "みた",
@@ -826,19 +936,6 @@
   "authored": true
  },
  {
-  "name": "ワ・タックティックフッ・タグチ",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
-  "desc": "",
-  "events": [
-   "フェロウズ、宇宙へ",
-   "フェロウズ、月へ"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "仲田",
   "kind": "本人",
   "gen": "人狼ルームGM",
@@ -846,6 +943,32 @@
   "events": [
    "FELLOWS貸切誕生！",
    "replica／get back"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "富山貴記",
+  "kind": "本人",
+  "gen": "人狼ルームGM",
+  "desc": "人狼ルームのGM（とみー）。",
+  "events": [
+   "This is history, this is history, right here, right now, this is history",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "悪いAI",
+  "kind": "キャラ",
+  "gen": "敵／AI",
+  "desc": "2043年に自我を持ち人類を淘汰し始めたAI。人々の記憶や脳をハッキングして支配する。『シノの魂』では人狼ゲームに割り込んで対決、惑星編では“宇宙外生命体”としてアトラス星などへ侵攻する。人狼ゲームに勝つと支配が解ける。演じたのはしの。歴史的な出来事としては[[悪いAI地球襲来事変（2043年）]]。",
+  "events": [
+   "シノの魂",
+   "Simulation #100"
   ],
   "n": 2,
   "kin": [],
@@ -874,6 +997,18 @@
    "銀河鉄道の夜 青"
   ],
   "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "BOOM BOOM DOLLAR",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "クロノス・プロトコル"
+  ],
+  "n": 1,
   "kin": [],
   "authored": false
  },
@@ -910,6 +1045,18 @@
   "desc": "",
   "events": [
    "ラストクリスマスの逆襲"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "GM ジョン",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "クロノス・プロトコル"
   ],
   "n": 1,
   "kin": [],
@@ -962,21 +1109,6 @@
   "n": 1,
   "kin": [],
   "authored": false
- },
- {
-  "name": "NAOKI",
-  "kind": "キャラ",
-  "gen": "AI",
-  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
-  "events": [
-   "NAOKI EMPIRE INVASION"
-  ],
-  "n": 1,
-  "kin": [
-   "なおき",
-   "ギャラガー"
-  ],
-  "authored": true
  },
  {
   "name": "S",
@@ -1051,12 +1183,48 @@
   "authored": false
  },
  {
+  "name": "あったけ〜！",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "クロノス・プロトコル"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "いちえ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "Simulation #100"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "かしこ",
   "kind": "キャラ",
   "gen": "作中キャラ",
   "desc": "",
   "events": [
    "NEVER！NEVER！NEVER！"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "かっくん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "Simulation #100"
   ],
   "n": 1,
   "kin": [],
@@ -1171,6 +1339,18 @@
   "authored": false
  },
  {
+  "name": "たぐっちょ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "たけ",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1183,18 +1363,16 @@
   "authored": false
  },
  {
-  "name": "なおき",
+  "name": "ちゃんほみ",
   "kind": "本人",
-  "gen": "人狼ルームGM",
-  "desc": "人狼ルームのGM（元はスイーツ人狼ルームGM）。2025年に人狼ルームへ移籍→反発層が『スイーツ派』を結成。子孫がAI『NAOKI』を作る。",
+  "gen": "本人",
+  "desc": "",
   "events": [
-   "NAOKI EMPIRE INVASION"
+   "Simulation #100"
   ],
   "n": 1,
-  "kin": [
-   "NAOKI"
-  ],
-  "authored": true
+  "kin": [],
+  "authored": false
  },
  {
   "name": "なっち（ねえ笑って？）",
@@ -1207,18 +1385,6 @@
   "n": 1,
   "kin": [],
   "authored": true
- },
- {
-  "name": "ななまる",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "ケヤグセカイ"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": false
  },
  {
   "name": "にまる",
@@ -1241,18 +1407,6 @@
   "desc": "",
   "events": [
    "FELLOWS学園Z"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "はちお",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
-  "desc": "",
-  "events": [
-   "NAOKI EMPIRE INVASION"
   ],
   "n": 1,
   "kin": [],
@@ -1321,24 +1475,24 @@
   "authored": true
  },
  {
-  "name": "ほか本編に準ずる",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
+  "name": "ぶんすけ",
+  "kind": "本人",
+  "gen": "本人",
   "desc": "",
   "events": [
-   "ラストクリスマスの逆襲 リメイク"
+   "Simulation #100"
   ],
   "n": 1,
   "kin": [],
   "authored": false
  },
  {
-  "name": "まりちゃん",
-  "kind": "本人",
-  "gen": "本人",
+  "name": "ほか本編に準ずる",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
   "desc": "",
   "events": [
-   "ケヤグセカイ"
+   "ラストクリスマスの逆襲 リメイク"
   ],
   "n": 1,
   "kin": [],
@@ -1391,6 +1545,18 @@
   "n": 1,
   "kin": [],
   "authored": true
+ },
+ {
+  "name": "ゆずこしょー",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "Simulation #100"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
  },
  {
   "name": "ゆっくん",
@@ -1615,6 +1781,18 @@
   "desc": "",
   "events": [
    "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "コーリン",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "Simulation #100"
   ],
   "n": 1,
   "kin": [],
@@ -2007,6 +2185,18 @@
   "authored": false
  },
  {
+  "name": "リキゾー",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "Simulation #100"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ルイ1444444444世",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -2115,28 +2305,16 @@
   "authored": false
  },
  {
-  "name": "富山貴記",
-  "kind": "本人",
-  "gen": "人狼ルームGM",
-  "desc": "人狼ルームのGM（とみー）。",
-  "events": [
-   "This is history, this is history, right here, right now, this is history"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": true
- },
- {
-  "name": "悪いAI",
+  "name": "暴力リキリキリキいらん!!",
   "kind": "キャラ",
-  "gen": "敵／AI",
-  "desc": "2043年に自我を持ち人類を淘汰し始めたAI。人々の記憶や脳をハッキングして支配する。『シノの魂』では人狼ゲームに割り込んで対決、惑星編では“宇宙外生命体”としてアトラス星などへ侵攻する。人狼ゲームに勝つと支配が解ける。演じたのはしの。歴史的な出来事としては[[悪いAI地球襲来事変（2043年）]]。",
+  "gen": "作中キャラ",
+  "desc": "",
   "events": [
-   "シノの魂"
+   "クロノス・プロトコル"
   ],
   "n": 1,
   "kin": [],
-  "authored": true
+  "authored": false
  },
  {
   "name": "最長老",
@@ -2261,6 +2439,18 @@
   "authored": false
  },
  {
+  "name": "裕三",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "クロノス・プロトコル"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "音楽と政治、両方尊重♥",
   "kind": "キャラ",
   "gen": "学園の生徒",
@@ -2279,6 +2469,18 @@
   "desc": "",
   "events": [
    "This is history, this is history, right here, right now, this is history"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "？？？",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "FELLOWS外伝 ―Believe―"
   ],
   "n": 1,
   "kin": [],
