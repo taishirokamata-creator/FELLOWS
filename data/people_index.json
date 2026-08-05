@@ -668,22 +668,6 @@
   "authored": false
  },
  {
-  "name": "NAOKI",
-  "kind": "キャラ",
-  "gen": "AI",
-  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
-  "events": [
-   "NAOKI EMPIRE INVASION",
-   "NAOKI CLOSE"
-  ],
-  "n": 2,
-  "kin": [
-   "なおき",
-   "ギャラガー"
-  ],
-  "authored": true
- },
- {
   "name": "きむら",
   "kind": "本人",
   "gen": "本人",
@@ -978,6 +962,21 @@
   "n": 1,
   "kin": [],
   "authored": false
+ },
+ {
+  "name": "NAOKI",
+  "kind": "キャラ",
+  "gen": "AI",
+  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [
+   "なおき",
+   "ギャラガー"
+  ],
+  "authored": true
  },
  {
   "name": "S",

@@ -1130,25 +1130,6 @@ const DATA = {
       "chant": "We are FELLOWS!!"
     },
     {
-      "id": "naoki-close",
-      "title": "NAOKI CLOSE",
-      "series": "FELLOWS学園",
-      "real_date": "2026年2月4日（第60回 LX）",
-      "iu_date": "—",
-      "logline": "学園長不在危機の中、NAOKIと16人クローズ4戦。",
-      "synopsis": "FELLOWS学園主催「NAOKI CLOSE」。学園長不在の危機を乗り越え、NAOKIと16人でクローズ4戦。『NAOKI EMPIRE INVASION』（2025年7月16日）とは別イベント・別日で、本作は2026年2月4日（第60回 LX）の開催。",
-      "chars": [
-        "NAOKI"
-      ],
-      "world": [
-        "NAOKI GAME / なおき帝国"
-      ],
-      "connects": [
-        "NAOKI EMPIRE INVASION"
-      ],
-      "chant": "We are FELLOWS!!"
-    },
-    {
       "id": "valentine",
       "title": "バレンタイン告白大作戦",
       "series": "FELLOWS学園",
@@ -1696,8 +1677,7 @@ const DATA = {
       "k": "NAOKI AI",
       "v": "人狼ルームGMなおきの分身AI。スイーツ派が2043年移住先で作成。なおき帝国の王NAOKI＝これ。",
       "see": [
-        "NAOKI EMPIRE INVASION",
-        "NAOKI CLOSE"
+        "NAOKI EMPIRE INVASION"
       ]
     },
     {
@@ -1836,7 +1816,7 @@ function chips(arr,cls){return '<div class="chips">'+arr.map(x=>'<span class="ch
 
 // ---- Story timeline (explicit in-universe order) ----
 const ORDER=['story-sep','story-oct','shino','meison','xmas','special','openeyes',
-  'lastxmas','lastxmas-remake','never','space','naoki','moon','future','thishistory','keyagu','nakama','naoki-close','fourth','ginga-red','ginga-blue','tenka-gendai','tenka','tenka4','getback','valentine','gakuenz','kaiju','nameku'];
+  'lastxmas','lastxmas-remake','never','space','naoki','moon','future','thishistory','keyagu','nakama','fourth','ginga-red','ginga-blue','tenka-gendai','tenka','tenka4','getback','valentine','gakuenz','kaiju','nameku'];
 const evs=[...DATA.events].sort((a,b)=>ORDER.indexOf(a.id)-ORDER.indexOf(b.id));
 document.getElementById('story-tl').innerHTML = evs.map(e=>{
   const sup = (e.id==='thishistory'||e.id==='keyagu');
@@ -2559,22 +2539,6 @@ const PEOPLE = [
   "authored": false
  },
  {
-  "name": "NAOKI",
-  "kind": "キャラ",
-  "gen": "AI",
-  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
-  "events": [
-   "NAOKI EMPIRE INVASION",
-   "NAOKI CLOSE"
-  ],
-  "n": 2,
-  "kin": [
-   "なおき",
-   "ギャラガー"
-  ],
-  "authored": true
- },
- {
   "name": "きむら",
   "kind": "本人",
   "gen": "本人",
@@ -2869,6 +2833,21 @@ const PEOPLE = [
   "n": 1,
   "kin": [],
   "authored": false
+ },
+ {
+  "name": "NAOKI",
+  "kind": "キャラ",
+  "gen": "AI",
+  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
+  "events": [
+   "NAOKI EMPIRE INVASION"
+  ],
+  "n": 1,
+  "kin": [
+   "なおき",
+   "ギャラガー"
+  ],
+  "authored": true
  },
  {
   "name": "S",

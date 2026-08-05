@@ -949,25 +949,6 @@
       "chant": "We are FELLOWS!!"
     },
     {
-      "id": "naoki-close",
-      "title": "NAOKI CLOSE",
-      "series": "FELLOWS学園",
-      "real_date": "2026年2月4日（第60回 LX）",
-      "iu_date": "—",
-      "logline": "学園長不在危機の中、NAOKIと16人クローズ4戦。",
-      "synopsis": "FELLOWS学園主催「NAOKI CLOSE」。学園長不在の危機を乗り越え、NAOKIと16人でクローズ4戦。『NAOKI EMPIRE INVASION』（2025年7月16日）とは別イベント・別日で、本作は2026年2月4日（第60回 LX）の開催。",
-      "chars": [
-        "NAOKI"
-      ],
-      "world": [
-        "NAOKI GAME / なおき帝国"
-      ],
-      "connects": [
-        "NAOKI EMPIRE INVASION"
-      ],
-      "chant": "We are FELLOWS!!"
-    },
-    {
       "id": "valentine",
       "title": "バレンタイン告白大作戦",
       "series": "FELLOWS学園",
@@ -1515,8 +1496,7 @@
       "k": "NAOKI AI",
       "v": "人狼ルームGMなおきの分身AI。スイーツ派が2043年移住先で作成。なおき帝国の王NAOKI＝これ。",
       "see": [
-        "NAOKI EMPIRE INVASION",
-        "NAOKI CLOSE"
+        "NAOKI EMPIRE INVASION"
       ]
     },
     {
