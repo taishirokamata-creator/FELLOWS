@@ -91,9 +91,9 @@ def md2html(body):
             close_ul(); close_tbl(); out.append(f'<blockquote>{inline(l.split("]",1)[1].strip())}</blockquote>'); continue
         if l.startswith(">"):
             close_ul(); close_tbl(); out.append(f'<blockquote>{inline(l[1:].strip())}</blockquote>'); continue
-        if l.startswith("| "):
+        if l.startswith("|"):
             cells = [c.strip() for c in l.strip().strip("|").split("|")]
-            if all(set(c) <= set("-: ") for c in cells):  # 区切り
+            if all(set(c) <= set("-:| ") for c in cells) and any("-" in c for c in cells):  # 区切り行(|---|)
                 continue
             if not tbl:
                 close_ul(); out.append('<div class="tw"><table><tbody>'); tbl = True

@@ -483,11 +483,11 @@ if ts:
     tbl_sec = []
     for b in blocks:
         tbl_sec.append(f"### {b}")
-        tbl_sec.append("| 回 | 開催日 | MTF／SMTF | GM／ゲスト | 賞金 | 特記 |")
-        tbl_sec.append("|---|---|---|---|---|---|")
+        tbl_sec.append("| 回 | 開催日 | MTF／SMTF | 特記 |")
+        tbl_sec.append("|---|---|---|---|")
         for r in ts:
             if r["block"] != b: continue
-            tbl_sec.append(f"| [[{sanitize(r['title'])}]] | {r['date']} | {r.get('mtf','')} | {r.get('gg','')} | {r.get('prize','')} | {r.get('note','')} |")
+            tbl_sec.append(f"| [[{sanitize(r['title'])}]] | {r['date']} | {r.get('mtf','')} | {r.get('note','')} |")
         tbl_sec.append("")
     matome = "---\ntype: 天下一武狼会シリーズ（目次）\ntags: [天下一武狼会, FELLOWS]\n---\n# 天下一武狼会シリーズ\n" + \
         db.get("tenka_intro","") + "\n\n" + "\n".join(tbl_sec) + "\n🏠 [[00_HOME]]\n"
