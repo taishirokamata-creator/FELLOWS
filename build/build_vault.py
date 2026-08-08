@@ -33,7 +33,7 @@ SHORT = {
  # ---- 今回追加の公演 ----
  "nakama":"ナカマセカイ","nameku":"FELLOWS、ナメック星へ","getback":"replica／get back",
  "ginga-red":"銀河鉄道の夜 赤","ginga-blue":"銀河鉄道の夜 青","fourth":"なぞの四人目の男",
- "tenka":"天下一武狼会シリーズ","valentine":"バレンタイン告白大作戦",
+ "valentine":"バレンタイン告白大作戦",
  "gakuenz":"FELLOWS学園Z","kaiju":"怪獣",
  "tenka4":"失われた天下一武狼会 第4回の記憶","tenka-gendai":"第二回現代版天下一武狼会（石丸ラスト回）",
  "sim100":"Simulation #100","kronos":"クロノス・プロトコル","believe":"FELLOWS外伝 ―Believe―",
@@ -47,13 +47,13 @@ CONNECT = {
  "keyagu":["thishistory","story-sep"],
  "nakama":["keyagu","thishistory"], "nameku":["future","getback","tenka4"],
  "ginga-red":["ginga-blue"], "ginga-blue":["ginga-red"],
- "tenka":["tenka4","tenka-gendai"], "tenka4":["tenka","future","nameku","tenka-gendai"], "tenka-gendai":["tenka","tenka4"],
+ "tenka4":["future","nameku","tenka-gendai"], "tenka-gendai":["tenka4"],
  "sim100":["shino"], "kronos":["nameku","future"], "believe":["story-sep"],
 }
 # 作中年表/HOMEで公演を並べる順（新規は末尾に）
 STORY_ORDER = ["story-sep","story-oct","nakama","sim100","shino","meison","xmas","special","openeyes",
  "lastxmas","lastxmas-remake","never","space","naoki","moon","future","nameku","kronos",
- "getback","fourth","ginga-red","ginga-blue","tenka-gendai","tenka","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu","believe"]
+ "getback","fourth","ginga-red","ginga-blue","tenka-gendai","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu","believe"]
 ev_by_id = {e["id"]: e for e in db["events"]}
 
 # ---------- 本人ロスター（参加者ランキングPDF＝実在プレイヤー／GM） ----------
@@ -408,7 +408,7 @@ def _first_year(s):
 EV_IU_NUM = {  # iu_dateが非数値/枠組み表記の公演の作中年を補正
  "story-sep":2023, "story-oct":1978, "getback":2024, "nakama":2024,
  "fourth":2026, "ginga-red":2026, "ginga-blue":2026, "keyagu":5524,
- "kaiju":2200, "tenka":2024, "sim100":2033, "kronos":2076, "believe":2025, "tenka-gendai":2025, "nameku":2076,
+ "kaiju":2200, "sim100":2033, "kronos":2076, "believe":2025, "tenka-gendai":2025, "nameku":2076,
 }
 EV_SKIP = set()  # 総称シリーズは線表から除外
 def _ev_num(e):
@@ -474,6 +474,31 @@ tags: [年表, 開催史, FELLOWS]
 🏠 [[00_HOME]]　｜　🌏 [[作中年表]]
 """
 w("年表", "現実の開催史", real_body)
+
+# ---------- 生成: 天下一武狼会シリーズ（独立カテゴリ） ----------
+ts = db.get("tenka_series", [])
+if ts:
+    TFOLDER = "天下一武狼会シリーズ"
+    blocks = []
+    for r in ts:
+        if r["block"] not in blocks: blocks.append(r["block"])
+    tbl_sec = []
+    for b in blocks:
+        tbl_sec.append(f"### {b}")
+        tbl_sec.append("| 回 | 開催日 | MTF／SMTF | GM／ゲスト | 賞金 | 特記 |")
+        tbl_sec.append("|---|---|---|---|---|---|")
+        for r in ts:
+            if r["block"] != b: continue
+            tbl_sec.append(f"| [[{sanitize(r['title'])}]] | {r['date']} | {r.get('mtf','')} | {r.get('gg','')} | {r.get('prize','')} | {r.get('note','')} |")
+        tbl_sec.append("")
+    matome = "---\ntype: 天下一武狼会シリーズ（目次）\ntags: [天下一武狼会, FELLOWS]\n---\n# 天下一武狼会シリーズ\n" + \
+        db.get("tenka_intro","") + "\n\n" + "\n".join(tbl_sec) + "\n🏠 [[00_HOME]]\n"
+    w(TFOLDER, "天下一武狼会シリーズ", matome)
+    for r in ts:
+        if r.get("existing"): continue
+        body = "---\ntype: 天下一武狼会\n現実開催日: " + r["date"] + "\ntags: [天下一武狼会, FELLOWS]\n---\n# " + \
+            r["title"] + "\n" + r.get("desc","") + "\n\n⟵ [[天下一武狼会シリーズ]]\n"
+        w(TFOLDER, r["title"], body)
 
 # ---------- 生成: HOME (MOC) ----------
 home = f"""---

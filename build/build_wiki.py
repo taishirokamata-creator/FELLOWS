@@ -8,8 +8,8 @@ BASE = os.path.dirname(os.path.dirname(HERE))
 VAULT = os.path.join(BASE, "FELLOWS_Vault")
 OUT   = os.path.join(BASE, "年表", "wiki.html")
 
-CAT_ORDER = ["年表", "公演", "キャラクター", "用語集"]
-CAT_ICON  = {"年表":"🗺","公演":"📖","キャラクター":"👥","用語集":"📚","HOME":"🏠"}
+CAT_ORDER = ["年表", "公演", "天下一武狼会シリーズ", "キャラクター", "用語集"]
+CAT_ICON  = {"年表":"🗺","公演":"📖","天下一武狼会シリーズ":"🏆","キャラクター":"👥","用語集":"📚","HOME":"🏠"}
 
 def esc(s): return htmlmod.escape(s, quote=False)
 
@@ -183,6 +183,16 @@ def sortkey(title):
 GROUP_MIN = 8  # これ未満のカテゴリは五十音で分けず素の一覧にする
 index = {}
 for c in CAT_ORDER + ["HOME"]:
+    if c == "天下一武狼会シリーズ":
+        # 五十音でばらさず「まとめ→開催日順」のフラット一覧にする
+        def _tk(t):
+            fm = pages[t]["fm"]
+            is_matome = "目次" in fm.get("type", "")
+            m = re.search(r'(\d{4})年(\d{1,2})?月?(\d{1,2})?', fm.get("現実開催日", ""))
+            dk = (int(m.group(1)), int(m.group(2) or 99), int(m.group(3) or 99)) if m else (9999, 99, 99)
+            return (0 if is_matome else 1, dk, t)
+        index[c] = [["", sorted([t for t in data if data[t]["cat"] == c], key=_tk)]]
+        continue
     ts = sorted([t for t in data if data[t]["cat"] == c], key=sortkey)
     if c == "HOME" or len(ts) < GROUP_MIN:
         index[c] = [["", ts]]
