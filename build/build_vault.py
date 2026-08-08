@@ -406,9 +406,9 @@ def _first_year(s):
 EV_IU_NUM = {  # iu_dateが非数値/枠組み表記の公演の作中年を補正
  "story-sep":2023, "story-oct":1978, "getback":2024, "nakama":2024,
  "fourth":2026, "ginga-red":2026, "ginga-blue":2026, "keyagu":5524,
- "kaiju":2200, "sim100":2033, "kronos":2076, "believe":2025, "tenka-gendai":2025, "nameku":2076,
+ "kaiju":2200, "tenka":2024, "sim100":2033, "kronos":2076, "believe":2025, "tenka-gendai":2025, "nameku":2076,
 }
-EV_SKIP = {"tenka"}  # 総称シリーズは線表から除外
+EV_SKIP = set()  # 総称シリーズは線表から除外
 def _ev_num(e):
     if e["id"] in EV_IU_NUM: return EV_IU_NUM[e["id"]]
     return _first_year(e["iu_date"]) or 9999

@@ -17,13 +17,14 @@
    "FELLOWS、ナメック星へ",
    "replica／get back",
    "なぞの四人目の男",
+   "天下一武狼会シリーズ",
    "FELLOWS学園Z",
    "第二回現代版天下一武狼会（石丸ラスト回）",
    "Simulation #100",
    "クロノス・プロトコル",
    "FELLOWS外伝 ―Believe―"
   ],
-  "n": 17,
+  "n": 18,
   "kin": [
    "学園長しのぴ",
    "にゃんぽこ"
@@ -47,12 +48,13 @@
    "NEVER！NEVER！NEVER！",
    "FELLOWS、ナメック星へ",
    "なぞの四人目の男",
+   "天下一武狼会シリーズ",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
    "怪獣",
    "クロノス・プロトコル"
   ],
-  "n": 15,
+  "n": 16,
   "kin": [
    "阿部洸希"
   ],
@@ -73,6 +75,7 @@
    "NAOKI EMPIRE INVASION",
    "NEVER！NEVER！NEVER！",
    "FELLOWS、ナメック星へ",
+   "天下一武狼会シリーズ",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
    "FELLOWS学園Z",
@@ -80,9 +83,36 @@
    "第二回現代版天下一武狼会（石丸ラスト回）",
    "クロノス・プロトコル"
   ],
-  "n": 15,
+  "n": 16,
   "kin": [
    "わっき〜"
+  ],
+  "authored": true
+ },
+ {
+  "name": "クニタケチユキ",
+  "kind": "キャラ",
+  "gen": "学園の生徒",
+  "desc": "ちゆっきー（本人）の子。バンド THE FOREVER YOUNG（エバヤン）のボーカルという設定。元ネタはエバヤンのクニタケヒロキ。",
+  "events": [
+   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
+   "FELLOWS学園の人狼（クリスマス編）",
+   "オープン・ザ・アイズ",
+   "ラストクリスマスの逆襲",
+   "フェロウズ、宇宙へ",
+   "NAOKI EMPIRE INVASION",
+   "フェロウズ、月へ",
+   "NEVER！NEVER！NEVER！",
+   "FELLOWS、ナメック星へ",
+   "天下一武狼会シリーズ",
+   "バレンタイン告白大作戦",
+   "怪獣",
+   "第二回現代版天下一武狼会（石丸ラスト回）",
+   "クロノス・プロトコル"
+  ],
+  "n": 14,
+  "kin": [
+   "ちゆっきー"
   ],
   "authored": true
  },
@@ -114,32 +144,6 @@
   "authored": true
  },
  {
-  "name": "クニタケチユキ",
-  "kind": "キャラ",
-  "gen": "学園の生徒",
-  "desc": "ちゆっきー（本人）の子。バンド THE FOREVER YOUNG（エバヤン）のボーカルという設定。元ネタはエバヤンのクニタケヒロキ。",
-  "events": [
-   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
-   "FELLOWS学園の人狼（クリスマス編）",
-   "オープン・ザ・アイズ",
-   "ラストクリスマスの逆襲",
-   "フェロウズ、宇宙へ",
-   "NAOKI EMPIRE INVASION",
-   "フェロウズ、月へ",
-   "NEVER！NEVER！NEVER！",
-   "FELLOWS、ナメック星へ",
-   "バレンタイン告白大作戦",
-   "怪獣",
-   "第二回現代版天下一武狼会（石丸ラスト回）",
-   "クロノス・プロトコル"
-  ],
-  "n": 13,
-  "kin": [
-   "ちゆっきー"
-  ],
-  "authored": true
- },
- {
   "name": "にゃんぽ子",
   "kind": "キャラ",
   "gen": "学園長（2代目）",
@@ -153,12 +157,13 @@
    "NAOKI EMPIRE INVASION",
    "フェロウズ、月へ",
    "フェロウズ、未来へ",
+   "天下一武狼会シリーズ",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
    "怪獣",
    "第二回現代版天下一武狼会（石丸ラスト回）"
   ],
-  "n": 12,
+  "n": 13,
   "kin": [
    "にゃんぽこ",
    "学園長しのぴ"
@@ -177,6 +182,7 @@
    "ラストクリスマスの逆襲",
    "フェロウズ、宇宙へ",
    "NAOKI EMPIRE INVASION",
+   "天下一武狼会シリーズ",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
    "FELLOWS学園Z",
@@ -184,7 +190,7 @@
    "第二回現代版天下一武狼会（石丸ラスト回）",
    "クロノス・プロトコル"
   ],
-  "n": 12,
+  "n": 13,
   "kin": [
    "小梅"
   ],
@@ -203,12 +209,13 @@
    "フェロウズ、宇宙へ",
    "NAOKI EMPIRE INVASION",
    "NEVER！NEVER！NEVER！",
+   "天下一武狼会シリーズ",
    "失われた天下一武狼会 第4回の記憶",
    "バレンタイン告白大作戦",
    "怪獣",
    "第二回現代版天下一武狼会（石丸ラスト回）"
   ],
-  "n": 11,
+  "n": 12,
   "kin": [
    "マノ"
   ],
@@ -264,6 +271,25 @@
   "authored": true
  },
  {
+  "name": "うに",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "天下一武狼会シリーズ",
+   "Simulation #100",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 8,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "まぐろ",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -283,24 +309,6 @@
   "authored": false
  },
  {
-  "name": "うに",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back",
-   "Simulation #100",
-   "FELLOWS外伝 ―Believe―"
-  ],
-  "n": 7,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "にゃんぽこ",
   "kind": "本人",
   "gen": "本人",
@@ -312,6 +320,24 @@
    "ケヤグセカイ",
    "なぞの四人目の男",
    "Simulation #100",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 7,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "イムラ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "replica／get back",
+   "天下一武狼会シリーズ",
    "FELLOWS外伝 ―Believe―"
   ],
   "n": 7,
@@ -412,23 +438,6 @@
  },
  {
   "name": "わっき〜",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "replica／get back",
-   "FELLOWS外伝 ―Believe―"
-  ],
-  "n": 6,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "イムラ",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
@@ -591,6 +600,21 @@
   "authored": false
  },
  {
+  "name": "ルイ144世",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "ラストクリスマスの逆襲",
+   "天下一武狼会シリーズ",
+   "失われた天下一武狼会 第4回の記憶",
+   "第二回現代版天下一武狼会（石丸ラスト回）"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "幸子",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -604,6 +628,23 @@
   "n": 4,
   "kin": [],
   "authored": false
+ },
+ {
+  "name": "NAOKI",
+  "kind": "キャラ",
+  "gen": "AI",
+  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "天下一武狼会シリーズ",
+   "クロノス・プロトコル"
+  ],
+  "n": 3,
+  "kin": [
+   "なおき",
+   "ギャラガー"
+  ],
+  "authored": true
  },
  {
   "name": "いと",
@@ -676,6 +717,20 @@
   "authored": false
  },
  {
+  "name": "はちお",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "NAOKI EMPIRE INVASION",
+   "天下一武狼会シリーズ",
+   "クロノス・プロトコル"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ひこにゃん",
   "kind": "本人",
   "gen": "本人",
@@ -718,18 +773,18 @@
   "authored": false
  },
  {
-  "name": "ルイ144世",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
-  "desc": "",
+  "name": "メイソン",
+  "kind": "本人",
+  "gen": "人狼ルーム専属プレイヤー",
+  "desc": "人狼ルームの専属ゲームプレイヤー。カミングアウター村の考案者。",
   "events": [
-   "ラストクリスマスの逆襲",
-   "失われた天下一武狼会 第4回の記憶",
-   "第二回現代版天下一武狼会（石丸ラスト回）"
+   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
+   "This is history, this is history, right here, right now, this is history",
+   "天下一武狼会シリーズ"
   ],
   "n": 3,
   "kin": [],
-  "authored": false
+  "authored": true
  },
  {
   "name": "ワ・タックティックフッ・タグチ",
@@ -760,20 +815,31 @@
   "authored": false
  },
  {
-  "name": "NAOKI",
-  "kind": "キャラ",
-  "gen": "AI",
-  "desc": "なおきの分身AI。スイーツ派が2043年の移住先で作成。帝国ごと学園と合併する。",
+  "name": "富山貴記",
+  "kind": "本人",
+  "gen": "人狼ルームGM",
+  "desc": "人狼ルームのGM（とみー）。",
   "events": [
-   "NAOKI EMPIRE INVASION",
-   "クロノス・プロトコル"
+   "This is history, this is history, right here, right now, this is history",
+   "天下一武狼会シリーズ",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "ぐぐ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男",
+   "天下一武狼会シリーズ"
   ],
   "n": 2,
-  "kin": [
-   "なおき",
-   "ギャラガー"
-  ],
-  "authored": true
+  "kin": [],
+  "authored": false
  },
  {
   "name": "こたつ",
@@ -817,19 +883,6 @@
   "authored": false
  },
  {
-  "name": "はちお",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
-  "desc": "",
-  "events": [
-   "NAOKI EMPIRE INVASION",
-   "クロノス・プロトコル"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "ひこにゃ〜！",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -841,6 +894,19 @@
   "n": 2,
   "kin": [],
   "authored": false
+ },
+ {
+  "name": "ひらり",
+  "kind": "キャラ",
+  "gen": "学園の生徒",
+  "desc": "祖父も優勝経験があるという生徒。第4回大会でドクターペロの襲来をいち早く察知する。",
+  "events": [
+   "天下一武狼会シリーズ",
+   "失われた天下一武狼会 第4回の記憶"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": true
  },
  {
   "name": "ひ子",
@@ -923,19 +989,6 @@
   "authored": false
  },
  {
-  "name": "メイソン",
-  "kind": "本人",
-  "gen": "人狼ルーム専属プレイヤー",
-  "desc": "人狼ルームの専属ゲームプレイヤー。カミングアウター村の考案者。",
-  "events": [
-   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
-   "This is history, this is history, right here, right now, this is history"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": true
- },
- {
   "name": "仲田",
   "kind": "本人",
   "gen": "人狼ルームGM",
@@ -943,19 +996,6 @@
   "events": [
    "FELLOWS貸切誕生！",
    "replica／get back"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": true
- },
- {
-  "name": "富山貴記",
-  "kind": "本人",
-  "gen": "人狼ルームGM",
-  "desc": "人狼ルームのGM（とみー）。",
-  "events": [
-   "This is history, this is history, right here, right now, this is history",
-   "FELLOWS外伝 ―Believe―"
   ],
   "n": 2,
   "kin": [],
@@ -972,6 +1012,34 @@
   ],
   "n": 2,
   "kin": [],
+  "authored": true
+ },
+ {
+  "name": "浦",
+  "kind": "本人",
+  "gen": "人狼ルームGM",
+  "desc": "人狼ルームのGM。",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "天下一武狼会シリーズ"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "石丸",
+  "kind": "本人",
+  "gen": "人狼ルームGM",
+  "desc": "人狼ルームのGM。学園のガッツ石松の祖父（石丸将壮）にあたる。2025年3月で引退。",
+  "events": [
+   "天下一武狼会シリーズ",
+   "第二回現代版天下一武狼会（石丸ラスト回）"
+  ],
+  "n": 2,
+  "kin": [
+   "ガッツ石松"
+  ],
   "authored": true
  },
  {
@@ -1255,18 +1323,6 @@
   "authored": false
  },
  {
-  "name": "ぐぐ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "なぞの四人目の男"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "こはる",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1321,6 +1377,18 @@
   "desc": "",
   "events": [
    "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "すー",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "天下一武狼会シリーズ"
   ],
   "n": 1,
   "kin": [],
@@ -1447,18 +1515,6 @@
   "n": 1,
   "kin": [],
   "authored": false
- },
- {
-  "name": "ひらり",
-  "kind": "キャラ",
-  "gen": "学園の生徒",
-  "desc": "祖父も優勝経験があるという生徒。第4回大会でドクターペロの襲来をいち早く察知する。",
-  "events": [
-   "失われた天下一武狼会 第4回の記憶"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": true
  },
  {
   "name": "ぴじょん",
@@ -1805,6 +1861,18 @@
   "desc": "",
   "events": [
    "怪獣"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "シャルル・モン・モンテスキュー",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "天下一武狼会シリーズ"
   ],
   "n": 1,
   "kin": [],
@@ -2365,18 +2433,6 @@
   "authored": false
  },
  {
-  "name": "浦",
-  "kind": "本人",
-  "gen": "人狼ルームGM",
-  "desc": "人狼ルームのGM。",
-  "events": [
-   "ハロウィン人狼（10月編）"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": true
- },
- {
   "name": "真由美",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -2387,20 +2443,6 @@
   "n": 1,
   "kin": [],
   "authored": false
- },
- {
-  "name": "石丸",
-  "kind": "本人",
-  "gen": "人狼ルームGM",
-  "desc": "人狼ルームのGM。学園のガッツ石松の祖父（石丸将壮）にあたる。2025年3月で引退。",
-  "events": [
-   "第二回現代版天下一武狼会（石丸ラスト回）"
-  ],
-  "n": 1,
-  "kin": [
-   "ガッツ石松"
-  ],
-  "authored": true
  },
  {
   "name": "結",
