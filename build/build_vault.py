@@ -35,7 +35,7 @@ SHORT = {
  "ginga-red":"銀河鉄道の夜 赤","ginga-blue":"銀河鉄道の夜 青","fourth":"なぞの四人目の男",
  "valentine":"バレンタイン告白大作戦",
  "gakuenz":"FELLOWS学園Z","kaiju":"怪獣",
- "tenka4":"失われた天下一武狼会 第4回の記憶","tenka-gendai":"第二回現代版天下一武狼会（石丸ラスト回）",
+ "tenka4":"失われた天下一武狼会 第四回の記憶",
  "sim100":"Simulation #100","kronos":"クロノス・プロトコル","believe":"FELLOWS外伝 ―Believe―",
 }
 CONNECT = {
@@ -47,13 +47,13 @@ CONNECT = {
  "keyagu":["thishistory","story-sep"],
  "nakama":["keyagu","thishistory"], "nameku":["future","getback","tenka4"],
  "ginga-red":["ginga-blue"], "ginga-blue":["ginga-red"],
- "tenka4":["future","nameku","tenka-gendai"], "tenka-gendai":["tenka4"],
+ "tenka4":["future","nameku"],
  "sim100":["shino"], "kronos":["nameku","future"], "believe":["story-sep"],
 }
 # 作中年表/HOMEで公演を並べる順（新規は末尾に）
 STORY_ORDER = ["story-sep","story-oct","nakama","sim100","shino","meison","xmas","special","openeyes",
  "lastxmas","lastxmas-remake","never","space","naoki","moon","future","nameku","kronos",
- "getback","fourth","ginga-red","ginga-blue","tenka-gendai","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu","believe"]
+ "getback","fourth","ginga-red","ginga-blue","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu","believe"]
 ev_by_id = {e["id"]: e for e in db["events"]}
 
 # ---------- 本人ロスター（参加者ランキングPDF＝実在プレイヤー／GM） ----------
@@ -408,7 +408,7 @@ def _first_year(s):
 EV_IU_NUM = {  # iu_dateが非数値/枠組み表記の公演の作中年を補正
  "story-sep":2023, "story-oct":1978, "getback":2024, "nakama":2024,
  "fourth":2026, "ginga-red":2026, "ginga-blue":2026, "keyagu":5524,
- "kaiju":2200, "sim100":2033, "kronos":2076, "believe":2025, "tenka-gendai":2025, "nameku":2076,
+ "kaiju":2200, "sim100":2033, "kronos":2076, "believe":2025, "nameku":2076,
 }
 EV_SKIP = set()  # 総称シリーズは線表から除外
 def _ev_num(e):
@@ -496,7 +496,7 @@ if ts:
     w(TFOLDER, "天下一武狼会シリーズ", matome)
     for r in ts:
         if r.get("existing"): continue
-        body = "---\ntype: 天下一武狼会\n現実開催日: " + r["date"] + "\ntags: [天下一武狼会, FELLOWS]\n---\n# " + \
+        body = "---\ntype: 天下一武狼会\n区分: " + r.get("block","") + "\n現実開催日: " + r["date"] + "\ntags: [天下一武狼会, FELLOWS]\n---\n# " + \
             r["title"] + "\n" + r.get("desc","") + "\n\n⟵ [[天下一武狼会シリーズ]]\n"
         w(TFOLDER, r["title"], body)
 

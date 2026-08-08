@@ -184,14 +184,17 @@ GROUP_MIN = 8  # これ未満のカテゴリは五十音で分けず素の一覧
 index = {}
 for c in CAT_ORDER + ["HOME"]:
     if c == "天下一武狼会シリーズ":
-        # 五十音でばらさず「まとめ→開催日順」のフラット一覧にする
-        def _tk(t):
-            fm = pages[t]["fm"]
-            is_matome = "目次" in fm.get("type", "")
-            m = re.search(r'(\d{4})年(\d{1,2})?月?(\d{1,2})?', fm.get("現実開催日", ""))
-            dk = (int(m.group(1)), int(m.group(2) or 99), int(m.group(3) or 99)) if m else (9999, 99, 99)
-            return (0 if is_matome else 1, dk, t)
-        index[c] = [["", sorted([t for t in data if data[t]["cat"] == c], key=_tk)]]
+        # 五十音でばらさず、まとめ→小区分（FELLOWS学園主催／現代版／その他）→開催日順
+        def _dk(t):
+            m = re.search(r'(\d{4})年(\d{1,2})?月?(\d{1,2})?', pages[t]["fm"].get("現実開催日", ""))
+            return (int(m.group(1)), int(m.group(2) or 99), int(m.group(3) or 99)) if m else (9999, 99, 99)
+        allt = [t for t in data if data[t]["cat"] == c]
+        matome = [t for t in allt if "目次" in pages[t]["fm"].get("type", "")]
+        grp = [["", matome]] if matome else []
+        for b in ["FELLOWS学園主催", "現代版", "その他"]:
+            g = sorted([t for t in allt if pages[t]["fm"].get("区分", "") == b], key=_dk)
+            if g: grp.append([b, g])
+        index[c] = grp
         continue
     ts = sorted([t for t in data if data[t]["cat"] == c], key=sortkey)
     if c == "HOME" or len(ts) < GROUP_MIN:
