@@ -96,6 +96,8 @@ CHARS = {
    "desc":"人狼ルームのGM。作中キャラ『亜理紗は大変なものを盗んでいきました』を演じた本人。"},
  "なおき":{"kind":"本人","gen":"人狼ルームGM","aliases":["なおき"],"kin":["NAOKI"],
    "desc":"人狼ルームのGM（元はスイーツ人狼ルームGM）。2025年に人狼ルームへ移籍→反発層が『スイーツ派』を結成。子孫がAI『NAOKI』を作る。"},
+ "もんた":{"kind":"本人","gen":"参加者","aliases":["もんた","もんちゃん"],"kin":[],
+   "desc":"FELLOWSの参加者。『銀河鉄道の夜 赤』の主人公（“もんちゃん”）。"},
  "石丸":{"kind":"本人","gen":"人狼ルームGM","aliases":["石丸"],"kin":["ガッツ石松"],
    "desc":"人狼ルームのGM。学園のガッツ石松の祖父（石丸将壮）にあたる。2025年3月で引退。"},
  # ===== 作中キャラ（学園の生徒・敵・AI 等） =====
@@ -218,22 +220,31 @@ for e in db["events"]:
     cast_nodes = []
     cast_links = []
     seen_disp = set()
+    def _mklink(node, label):
+        return f"[[{sanitize(node)}|{label}]]" if sanitize(node) != label else f"[[{sanitize(label)}]]"
     for raw in e.get("chars", []):
         disp = cast_clean(raw)          # その回で使われた表記（as-played）を優先表示
-        # 「キャラ名（中の人：本人）」形式：リンク/一覧の対象はキャラ名（本人は一覧に入れない）
-        mm = re.search(r'（(?:演|中の人)[:：][^）]+）', disp)
-        key = disp[:mm.start()].strip() if mm else raw
-        cn = canon_for(key)
-        node = cn if cn else link_name(key)
-        if node and node not in cast_nodes:
-            cast_nodes.append(node)
         if not disp or disp in seen_disp:
             continue
         seen_disp.add(disp)
-        if node and sanitize(node) != disp:
-            cast_links.append(f"[[{sanitize(node)}|{disp}]]")   # 表示=その回の名前 / リンク=正規キャラページ
+        # 「キャラ名（演：本人）」形式：作中キャラと本人（複数可）を"別々の"リンクにする
+        mm = re.search(r'（(?:演|中の人)[:：]([^）]+)）', disp)
+        if mm:
+            char = disp[:mm.start()].strip()
+            cn = canon_for(char) or link_name(char)
+            if cn not in cast_nodes: cast_nodes.append(cn)
+            plinks = []
+            for p in re.split(r'[・／/、,]', mm.group(1)):
+                p = p.strip()
+                if not p: continue
+                pn = canon_for(p) or link_name(p)
+                if pn not in cast_nodes: cast_nodes.append(pn)
+                plinks.append(_mklink(pn, p))
+            cast_links.append(f"{_mklink(cn, char)}（演：{'・'.join(plinks)}）")
         else:
-            cast_links.append(f"[[{sanitize(disp)}]]")
+            cn = canon_for(raw) or link_name(raw)
+            if cn not in cast_nodes: cast_nodes.append(cn)
+            cast_links.append(_mklink(cn, disp))
     for node in cast_nodes:
         node_appears.setdefault(node, [])
         if e["id"] not in node_appears[node]:
