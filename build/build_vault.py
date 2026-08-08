@@ -35,7 +35,7 @@ SHORT = {
  "ginga-red":"銀河鉄道の夜 赤","ginga-blue":"銀河鉄道の夜 青","fourth":"なぞの四人目の男",
  "tenka":"天下一武狼会シリーズ","valentine":"バレンタイン告白大作戦",
  "gakuenz":"FELLOWS学園Z","kaiju":"怪獣",
- "tenka4":"失われた天下一武狼会 第4回の記憶","tenka-gendai":"現代版天下一武狼会",
+ "tenka4":"失われた天下一武狼会 第4回の記憶","tenka-gendai":"第二回現代版天下一武狼会（石丸ラスト回）",
  "sim100":"Simulation #100","kronos":"クロノス・プロトコル","believe":"FELLOWS外伝 ―Believe―",
 }
 CONNECT = {
