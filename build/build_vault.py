@@ -451,28 +451,26 @@ tags: [年表, 作中, FELLOWS]
 w("年表", "作中年表", canon_body)
 
 # ---------- 生成: 現実の開催史（開催日 / 公演 / 内容） ----------
-def realkey(e):
-    m = re.search(r'(\d{4})年(\d{1,2})?月?(\d{1,2})?', e["real_date"])
+def _rk(datestr):
+    m = re.search(r'(\d{4})年(\d{1,2})?月?(\d{1,2})?', datestr)
     if not m: return (9999, 99, 99)
-    return (int(m.group(1)), int(m.group(2)) if m.group(2) else 99,
-            int(m.group(3)) if m.group(3) else 99)
-rows = sorted(db["events"], key=realkey)
-real_body = """---
-type: 年表
-tags: [年表, 開催史, FELLOWS]
----
-# 🗓 現実の開催史（いつ何を上演したか）
-
-『FELLOWS世界の人狼』を実際に上演した日付順。公演名からページへ飛べます。
-
-| 現実の開催日 | 公演 | 内容 |
-|---|---|---|
-""" + "\n".join(
- f"| {e['real_date']} | [[{sanitize(SHORT[e['id']])}]] | {e['logline'].replace('|','／')} |" for e in rows
-) + """
-
-🏠 [[00_HOME]]　｜　🌏 [[作中年表]]
-"""
+    return (int(m.group(1)), int(m.group(2) or 99), int(m.group(3) or 99))
+combined = []  # (datekey, 開催日, リンク名, 内容)
+for e in db["events"]:
+    combined.append((_rk(e["real_date"]), e["real_date"], sanitize(SHORT[e["id"]]), e["logline"]))
+for r in db.get("tenka_series", []):
+    if r.get("existing"): continue  # 第四回など既存の公演イベントは events 側で計上済み
+    parts = []
+    if r.get("mtf") and r["mtf"] != "—": parts.append("MTF：" + r["mtf"])
+    if r.get("note"): parts.append(r["note"])
+    combined.append((_rk(r["date"]), r["date"], sanitize(r["title"]), "／".join(parts) or r.get("desc","")))
+combined.sort(key=lambda x: x[0])
+real_rows = "\n".join(f"| {c[1]} | [[{c[2]}]] | {c[3].replace('|','／')} |" for c in combined)
+real_body = ("---\ntype: 年表\ntags: [年表, 開催史, FELLOWS]\n---\n"
+    "# 🗓 現実の開催史（いつ何を上演したか）\n\n"
+    "『FELLOWS世界の人狼』を実際に上演した日付順（天下一武狼会シリーズ含む・網羅）。公演名からページへ飛べます。\n\n"
+    "| 現実の開催日 | 公演／イベント | 内容 |\n|---|---|---|\n" + real_rows +
+    "\n\n🏠 [[00_HOME]]　｜　🌏 [[作中年表]]\n")
 w("年表", "現実の開催史", real_body)
 
 # ---------- 生成: 天下一武狼会シリーズ（独立カテゴリ） ----------
