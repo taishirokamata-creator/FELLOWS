@@ -81,10 +81,11 @@
    "なぞの四人目の男",
    "失われた天下一武狼会 第四回の記憶",
    "バレンタイン告白大作戦",
+   "FELLOWS学園Z",
    "怪獣",
    "クロノス・プロトコル"
   ],
-  "n": 15,
+  "n": 16,
   "kin": [
    "阿部洸希"
   ],
@@ -118,6 +119,29 @@
   "authored": true
  },
  {
+  "name": "にゃんぽこ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "ナカマセカイ",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "FELLOWS学園Z",
+   "怪獣",
+   "Simulation #100",
+   "クロノス・プロトコル",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 12,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "クニタケチユキ",
   "kind": "キャラ",
   "gen": "学園の生徒",
@@ -143,6 +167,29 @@
   "authored": true
  },
  {
+  "name": "小梅",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "ナカマセカイ",
+   "replica／get back",
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "FELLOWS学園Z",
+   "怪獣",
+   "クロノス・プロトコル",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 12,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ちゆっきー",
   "kind": "本人",
   "gen": "本人",
@@ -155,28 +202,6 @@
    "replica／get back",
    "銀河鉄道の夜 赤",
    "銀河鉄道の夜 青",
-   "怪獣",
-   "Simulation #100",
-   "クロノス・プロトコル",
-   "FELLOWS外伝 ―Believe―"
-  ],
-  "n": 11,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "にゃんぽこ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "ナカマセカイ",
-   "銀河鉄道の夜 青",
-   "なぞの四人目の男",
    "怪獣",
    "Simulation #100",
    "クロノス・プロトコル",
@@ -212,6 +237,28 @@
   "authored": true
  },
  {
+  "name": "わっき〜",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "ナカマセカイ",
+   "replica／get back",
+   "銀河鉄道の夜 青",
+   "FELLOWS学園Z",
+   "怪獣",
+   "クロノス・プロトコル",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 11,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "アウトオブウメコ",
   "kind": "キャラ",
   "gen": "学園の生徒",
@@ -236,21 +283,21 @@
   "authored": true
  },
  {
-  "name": "小梅",
+  "name": "マノ",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
+   "FELLOWS貸切誕生！",
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
    "ナカマセカイ",
    "replica／get back",
    "銀河鉄道の夜 赤",
-   "銀河鉄道の夜 青",
    "なぞの四人目の男",
+   "FELLOWS学園Z",
    "怪獣",
-   "クロノス・プロトコル",
    "FELLOWS外伝 ―Believe―"
   ],
   "n": 11,
@@ -302,7 +349,7 @@
   "authored": true
  },
  {
-  "name": "わっき〜",
+  "name": "イムラ",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
@@ -313,9 +360,9 @@
    "ケヤグセカイ",
    "ナカマセカイ",
    "replica／get back",
-   "銀河鉄道の夜 青",
+   "銀河鉄道の夜 赤",
+   "FELLOWS学園Z",
    "怪獣",
-   "クロノス・プロトコル",
    "FELLOWS外伝 ―Believe―"
   ],
   "n": 10,
@@ -346,27 +393,6 @@
   "authored": true
  },
  {
-  "name": "マノ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "ナカマセカイ",
-   "replica／get back",
-   "銀河鉄道の夜 赤",
-   "なぞの四人目の男",
-   "怪獣",
-   "FELLOWS外伝 ―Believe―"
-  ],
-  "n": 10,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "学園長しのぴ",
   "kind": "キャラ",
   "gen": "AI（学園長）",
@@ -392,22 +418,21 @@
   "authored": true
  },
  {
-  "name": "イムラ",
+  "name": "J",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
    "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
    "シノの魂",
    "ケヤグセカイ",
    "ナカマセカイ",
    "replica／get back",
-   "銀河鉄道の夜 赤",
-   "怪獣",
+   "銀河鉄道の夜 青",
+   "FELLOWS学園Z",
    "FELLOWS外伝 ―Believe―"
   ],
-  "n": 9,
+  "n": 8,
   "kin": [],
   "authored": false
  },
@@ -446,24 +471,6 @@
    "クロノス・プロトコル"
   ],
   "n": 8,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "J",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "シノの魂",
-   "ケヤグセカイ",
-   "ナカマセカイ",
-   "replica／get back",
-   "銀河鉄道の夜 青",
-   "FELLOWS外伝 ―Believe―"
-  ],
-  "n": 7,
   "kin": [],
   "authored": false
  },
@@ -573,6 +580,22 @@
   "authored": false
  },
  {
+  "name": "イトウ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "ナカマセカイ",
+   "FELLOWS学園Z",
+   "怪獣"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ハマヤン",
   "kind": "本人",
   "gen": "本人",
@@ -654,6 +677,21 @@
   "authored": false
  },
  {
+  "name": "さっちん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ",
+   "FELLOWS学園Z",
+   "FELLOWS外伝 ―Believe―"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "たくや！",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -663,6 +701,36 @@
    "失われた天下一武狼会 第四回の記憶",
    "怪獣",
    "クロノス・プロトコル"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ななまる",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ケヤグセカイ",
+   "FELLOWS学園Z",
+   "Simulation #100",
+   "クロノス・プロトコル"
+  ],
+  "n": 4,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "のりちゃん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ",
+   "FELLOWS学園Z",
+   "FELLOWS外伝 ―Believe―"
   ],
   "n": 4,
   "kin": [],
@@ -693,21 +761,6 @@
    "FELLOWS学園の人狼（クリスマス編）",
    "FELLOWS学園新年会",
    "バレンタイン告白大作戦"
-  ],
-  "n": 4,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "イトウ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "ナカマセカイ",
-   "怪獣"
   ],
   "n": 4,
   "kin": [],
@@ -776,42 +829,56 @@
   "authored": false
  },
  {
-  "name": "さっちん",
+  "name": "こたつ",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
    "ハロウィン人狼（10月編）",
-   "ケヤグセカイ",
-   "FELLOWS外伝 ―Believe―"
+   "シノの魂",
+   "FELLOWS学園Z"
   ],
   "n": 3,
   "kin": [],
   "authored": false
  },
  {
-  "name": "ななまる",
+  "name": "みた",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
-   "ケヤグセカイ",
-   "Simulation #100",
+   "replica／get back",
+   "なぞの四人目の男",
+   "FELLOWS学園Z"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "るい",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ナカマセカイ",
+   "replica／get back",
+   "FELLOWS学園Z"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "わたく",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "フェロウズ、宇宙へ",
+   "なぞの四人目の男",
    "クロノス・プロトコル"
-  ],
-  "n": 3,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "のりちゃん",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "ハロウィン人狼（10月編）",
-   "ケヤグセカイ",
-   "FELLOWS外伝 ―Believe―"
   ],
   "n": 3,
   "kin": [],
@@ -876,13 +943,13 @@
   "authored": true
  },
  {
-  "name": "こたつ",
+  "name": "たぐっちょ",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
-   "ハロウィン人狼（10月編）",
-   "シノの魂"
+   "フェロウズ、宇宙へ",
+   "FELLOWS外伝 ―Believe―"
   ],
   "n": 2,
   "kin": [],
@@ -890,8 +957,8 @@
  },
  {
   "name": "たけ",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
+  "kind": "本人",
+  "gen": "本人",
   "desc": "",
   "events": [
    "なぞの四人目の男",
@@ -969,19 +1036,6 @@
   "authored": false
  },
  {
-  "name": "みた",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "replica／get back",
-   "なぞの四人目の男"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "もっちー",
   "kind": "本人",
   "gen": "本人",
@@ -1015,32 +1069,6 @@
   "events": [
    "銀河鉄道の夜 赤",
    "なぞの四人目の男"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "るい",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "ナカマセカイ",
-   "replica／get back"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "わたく",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "なぞの四人目の男",
-   "クロノス・プロトコル"
   ],
   "n": 2,
   "kin": [],
@@ -1553,18 +1581,6 @@
   "authored": false
  },
  {
-  "name": "たぐっちょ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS外伝 ―Believe―"
-  ],
-  "n": 1,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "ちゃんほみ",
   "kind": "本人",
   "gen": "本人",
@@ -1930,8 +1946,8 @@
  },
  {
   "name": "コーリン",
-  "kind": "キャラ",
-  "gen": "作中キャラ",
+  "kind": "本人",
+  "gen": "本人",
   "desc": "",
   "events": [
    "Simulation #100"
@@ -2433,6 +2449,18 @@
   "n": 1,
   "kin": [],
   "authored": true
+ },
+ {
+  "name": "占いジジ",
+  "kind": "キャラ",
+  "gen": "作中キャラ",
+  "desc": "",
+  "events": [
+   "なぞの四人目の男"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
  },
  {
   "name": "夏子",

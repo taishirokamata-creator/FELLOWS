@@ -69,6 +69,7 @@ PERSON_ROSTER = set("""
 木下 うら みなちゃん saku かんちゃん たけい かろ のし なごちー サイケルダー るる けめこ HAL けーすけ
 ほろ Natsuo ぴくせる のん せの John ちょうめい yukina さえき はるか しゅう サウザー
 阿部 浦 仲田 富山 柏村 アリサ メイソン 石丸 なおき 児玉 とみー
+コーリン たけ
 """.split())
 
 # ---------- 人物: 正規名 & エイリアス（イベント配役の突合用） ----------
@@ -328,6 +329,9 @@ tags: [人物, FELLOWS, {kind}]
 """
     w("キャラクター", name, body)
 
+# ---------- 作中キャラ（自動スタブ）の説明。本人は説明不要・作中キャラのみ。正データ＝JSON char_desc ----------
+CHAR_DESC = db.get("char_desc", {})
+
 # ---------- 生成: 配役から自動ノート化（本人／作中キャラを区分） ----------
 authored = set(CHARS.keys())
 minor_count = 0
@@ -338,6 +342,7 @@ for node, evids in sorted(node_appears.items()):
     apps = " / ".join(f"[[{sanitize(SHORT.get(i, ev_by_id[i]['title']))}]]" for i in evids)
     rk = reverse_kin.get(node, [])
     kin_sec = ("\n## 血縁・関連人物\n" + " / ".join(f"[[{sanitize(k)}]]" for k in rk) + "\n\n") if rk else "\n"
+    dsec = (CHAR_DESC.get(node, "").strip() + "\n") if CHAR_DESC.get(node, "").strip() else ""
     body = f"""---
 type: 人物
 区分: {kind}
@@ -345,7 +350,8 @@ tags: [人物, FELLOWS, {kind}]
 ---
 # {node}
 **{kind_badge(kind)}**
-{kin_sec}## 出演公演
+
+{dsec}{kin_sec}## 出演公演
 {apps}
 
 ---
