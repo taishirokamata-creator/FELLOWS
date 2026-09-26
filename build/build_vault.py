@@ -37,6 +37,7 @@ SHORT = {
  "gakuenz":"FELLOWS学園Z","kaiju":"怪獣",
  "tenka4":"失われた天下一武狼会 第四回の記憶",
  "sim100":"Simulation #100","kronos":"バタフライ・エフェクト","believe":"FELLOWS外伝 ―Believe―",
+ "aomori-red":"AOMORIの赤い実","sonic":"FELLOWS SONIC 2026","expo2026":"FELLOWS EXPO 2026 AOMORI",
 }
 CONNECT = {
  "story-sep":["keyagu"], "story-oct":["story-sep"], "shino":["future","space","naoki"],
@@ -49,11 +50,14 @@ CONNECT = {
  "ginga-red":["ginga-blue"], "ginga-blue":["ginga-red"],
  "tenka4":["future","nameku"],
  "sim100":["shino"], "kronos":["nameku","future"], "believe":["story-sep"],
+ "aomori-red":["sonic","expo2026","ginga-blue","future"], "sonic":["aomori-red","expo2026"],
+ "expo2026":["aomori-red","sonic","ginga-blue","keyagu"],
 }
 # 作中年表/HOMEで公演を並べる順（新規は末尾に）
 STORY_ORDER = ["story-sep","story-oct","nakama","sim100","shino","meison","xmas","special","openeyes",
  "lastxmas","lastxmas-remake","never","space","naoki","moon","future","nameku","kronos",
- "getback","fourth","ginga-red","ginga-blue","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu","believe"]
+ "getback","fourth","ginga-red","ginga-blue","tenka4","valentine","gakuenz","kaiju","thishistory","keyagu","believe",
+ "sonic","aomori-red","expo2026"]
 ev_by_id = {e["id"]: e for e in db["events"]}
 
 # ---------- 本人ロスター（参加者ランキングPDF＝実在プレイヤー／GM） ----------
@@ -69,7 +73,7 @@ PERSON_ROSTER = set("""
 木下 うら みなちゃん saku かんちゃん たけい かろ のし なごちー サイケルダー るる けめこ HAL けーすけ
 ほろ Natsuo ぴくせる のん せの John ちょうめい yukina さえき はるか しゅう サウザー
 阿部 浦 仲田 富山 柏村 アリサ メイソン 石丸 なおき 児玉 とみー
-コーリン たけ ジョン レオ
+コーリン たけ ジョン レオ おたかぴん
 """.split())
 
 # ---------- 人物: 正規名 & エイリアス（イベント配役の突合用） ----------
@@ -111,7 +115,7 @@ CHARS = {
  "脇脇脇男":{"kind":"キャラ","gen":"学園の生徒","aliases":["脇脇脇男","ワキヤス"],"kin":["わっき〜"],
    "desc":"わっき〜（本人）の子。勘が鋭い。ゼンイセカイ戦士の時間遡行によるバグでは“ワキヤスメ・アツコ”とも。"},
  "みの":{"kind":"キャラ","gen":"学園の生徒","aliases":["みの","みのミュージック"],"kin":["マノ"],
-   "desc":"マノ（本人）の子。音楽・ビートルズ好き。サンタどっきりの発案者。"},
+   "desc":"マノ（本人）の子。音楽・ビートルズ好き。サンタどっきりの発案者。祖母ババミュージック→母ハハミュージック→みのと受け継がれた『プレイヤー同士が互いに愛を持ち、本気で遊び、心から楽しみ楽しませる』という祖父母たちの想いを守り、AOMORIから学園に持ち込まれた“赤い実”を代々大切に育てている。"},
  "アウトオブウメコ":{"kind":"キャラ","gen":"学園の生徒","aliases":["アウトオブウメコ","ウメコ","梅田"],"kin":["小梅"],
    "desc":"小梅（本人）の子。ゼンイセカイ戦士の時間遡行によるバグでアウトオブウメコに。"},
  "クニタケチユキ":{"kind":"キャラ","gen":"学園の生徒","aliases":["クニタケチユキ","クニタケ"],"kin":["ちゆっきー"],
@@ -426,6 +430,7 @@ EV_IU_NUM = {  # iu_dateが非数値/枠組み表記の公演の作中年を補�
  "story-sep":2023, "story-oct":1978, "getback":2024, "nakama":2024,
  "fourth":2026, "ginga-red":2026, "ginga-blue":2026, "keyagu":5524,
  "kaiju":2200, "sim100":2033, "kronos":2076, "believe":2025, "nameku":2076,
+ "aomori-red":2076, "sonic":2026, "expo2026":2026,
 }
 EV_SKIP = set()  # 総称シリーズは線表から除外
 def _ev_num(e):
