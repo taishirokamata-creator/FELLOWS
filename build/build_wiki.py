@@ -8,6 +8,14 @@ BASE = os.path.dirname(os.path.dirname(HERE))
 VAULT = os.path.join(BASE, "FELLOWS_Vault")
 OUT   = os.path.join(BASE, "年表", "wiki.html")
 
+# fellows_db.json の meta（サイトの注意書き・問い合わせフォームURL）を読む
+try:
+    _META = json.load(open(os.path.join(BASE, "年表", "data", "fellows_db.json"), encoding="utf-8")).get("meta", {})
+except Exception:
+    _META = {}
+WIKI_NOTICE = _META.get("wiki_notice", "")
+FEEDBACK_URL = _META.get("feedback_url", "")
+
 CAT_ORDER = ["年表", "公演", "天下一武狼会シリーズ", "キャラクター", "用語集"]
 CAT_ICON  = {"年表":"🗺","公演":"📖","天下一武狼会シリーズ":"🏆","キャラクター":"👥","用語集":"📚","HOME":"🏠"}
 
@@ -213,7 +221,8 @@ for c in CAT_ORDER + ["HOME"]:
         index[c] = [[g, groups[g]] for g in GROUP_ORDER if g in groups]
 
 payload = json.dumps({"pages": data, "index": index, "order": CAT_ORDER,
-                      "icons": CAT_ICON}, ensure_ascii=False)
+                      "icons": CAT_ICON, "notice": WIKI_NOTICE, "feedback": FEEDBACK_URL},
+                     ensure_ascii=False)
 
 HTML = r"""<!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8">
@@ -266,6 +275,14 @@ h1.pt{margin:.1em 0 .4em;font-size:28px;border-bottom:2px solid var(--accent);pa
 .art td{border:1px solid var(--line);padding:6px 9px}
 .wl{color:var(--link)}
 .wl.dead{color:var(--muted);border-bottom:1px dotted var(--muted)}
+.sitenote{margin:2px 0 22px;padding:14px 18px;background:linear-gradient(180deg,rgba(229,72,77,.08),var(--panel));
+ border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;font-size:14px;color:#d8e0e8}
+.sitenote .nh{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--text);margin-bottom:6px;font-size:15px}
+.sitenote p{margin:6px 0;line-height:1.75}
+.sitenote .fbtn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:9px 18px;border-radius:999px;
+ background:var(--accent);color:#fff;font-weight:700;font-size:14px}
+.sitenote .fbtn:hover{filter:brightness(1.08);text-decoration:none}
+.sitenote .fnote{margin-top:10px;font-size:12px;color:var(--muted)}
 .rel{margin-top:28px;border-top:1px solid var(--line);padding-top:14px}
 .rel h3{font-size:14px;color:var(--muted);border:none;padding:0;margin:0 0 8px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
@@ -352,9 +369,17 @@ function render(){
   if(pg.links && pg.links.length) rel += `<div class="rel"><h3>🔗 関連項目</h3>${chip(pg.links)}</div>`;
   if(pg.back && pg.back.length) rel += `<div class="rel"><h3>↩ ここにリンクしている項目（${pg.back.length}）</h3>${chip(pg.back)}</div>`;
  }
+ let notice = '';
+ if(t==='00_HOME' && DB.notice){
+  const paras = String(DB.notice).split('\n').filter(x=>x.trim()).map(x=>`<p>${x}</p>`).join('');
+  const btn = DB.feedback
+   ? `<a class="fbtn" href="${DB.feedback}" target="_blank" rel="noopener">📮 修正依頼・ご意見フォーム</a>`
+   : `<div class="fnote">✏️ 修正依頼・ご意見フォームは準備中です（各ページの内容への指摘も歓迎）。</div>`;
+  notice = `<div class="sitenote"><div class="nh">📖 このサイトについて</div>${paras}${btn}</div>`;
+ }
  main.innerHTML = `<div class="crumb">${ICON[pg.cat]||''} ${pg.cat}</div>`+
   `<h1 class="pt">${t}<span class="badge">${pg.type||pg.cat}</span></h1>`+
-  info + `<div class="art">${pg.html}</div>` + rel;
+  notice + info + `<div class="art">${pg.html}</div>` + rel;
  window.scrollTo(0,0); markActive();
 }
 q.addEventListener('input', ()=>buildSide(q.value));
