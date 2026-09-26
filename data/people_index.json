@@ -1,38 +1,5 @@
 [
  {
-  "name": "阿部洸希",
-  "kind": "本人",
-  "gen": "人狼ルームGM（レジェンド）",
-  "desc": "人狼ルームGM／終身名誉GM。学園のア・バイバイの祖父にあたる。",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
-   "ラストクリスマスの逆襲 リメイク",
-   "This is history, this is history, right here, right now, this is history",
-   "ケヤグセカイ",
-   "ナカマセカイ",
-   "FELLOWS、ナメック星へ",
-   "replica／get back",
-   "銀河鉄道の夜 赤",
-   "銀河鉄道の夜 青",
-   "FELLOWS学園Z",
-   "怪獣",
-   "Simulation #100",
-   "バタフライ・エフェクト",
-   "FELLOWS外伝 ―Believe―",
-   "AOMORIの赤い実",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
-  ],
-  "n": 20,
-  "kin": [
-   "ア・バイバイ"
-  ],
-  "authored": true
- },
- {
   "name": "しの",
   "kind": "本人",
   "gen": "創始者／GM",
@@ -66,6 +33,38 @@
   "authored": true
  },
  {
+  "name": "阿部洸希",
+  "kind": "本人",
+  "gen": "人狼ルームGM（レジェンド）",
+  "desc": "人狼ルームGM／終身名誉GM。学園のア・バイバイの祖父にあたる。",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "FELLOWS学園の人狼（阿部おじ＆メイソンおじ襲来）",
+   "ラストクリスマスの逆襲 リメイク",
+   "This is history, this is history, right here, right now, this is history",
+   "ケヤグセカイ",
+   "ナカマセカイ",
+   "FELLOWS、ナメック星へ",
+   "replica／get back",
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青",
+   "FELLOWS学園Z",
+   "怪獣",
+   "Simulation #100",
+   "バタフライ・エフェクト",
+   "FELLOWS外伝 ―Believe―",
+   "AOMORIの赤い実",
+   "FELLOWS SONIC 2026"
+  ],
+  "n": 19,
+  "kin": [
+   "ア・バイバイ"
+  ],
+  "authored": true
+ },
+ {
   "name": "ア・バイバイ",
   "kind": "キャラ",
   "gen": "学園の生徒",
@@ -93,32 +92,6 @@
    "阿部洸希"
   ],
   "authored": true
- },
- {
-  "name": "にゃんぽこ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "ナカマセカイ",
-   "銀河鉄道の夜 青",
-   "なぞの四人目の男",
-   "FELLOWS学園Z",
-   "怪獣",
-   "Simulation #100",
-   "バタフライ・エフェクト",
-   "FELLOWS外伝 ―Believe―",
-   "AOMORIの赤い実",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
-  ],
-  "n": 15,
-  "kin": [],
-  "authored": false
  },
  {
   "name": "脇脇脇男",
@@ -149,6 +122,31 @@
   "authored": true
  },
  {
+  "name": "にゃんぽこ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "ナカマセカイ",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "FELLOWS学園Z",
+   "怪獣",
+   "Simulation #100",
+   "バタフライ・エフェクト",
+   "FELLOWS外伝 ―Believe―",
+   "AOMORIの赤い実",
+   "FELLOWS SONIC 2026"
+  ],
+  "n": 14,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ちゆっきー",
   "kind": "本人",
   "gen": "本人",
@@ -166,10 +164,9 @@
    "バタフライ・エフェクト",
    "FELLOWS外伝 ―Believe―",
    "AOMORIの赤い実",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
+   "FELLOWS SONIC 2026"
   ],
-  "n": 14,
+  "n": 13,
   "kin": [],
   "authored": false
  },
@@ -191,32 +188,7 @@
    "バタフライ・エフェクト",
    "FELLOWS外伝 ―Believe―",
    "AOMORIの赤い実",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
-  ],
-  "n": 14,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "イムラ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ハロウィン人狼（10月編）",
-   "シノの魂",
-   "ケヤグセカイ",
-   "ナカマセカイ",
-   "replica／get back",
-   "銀河鉄道の夜 赤",
-   "FELLOWS学園Z",
-   "怪獣",
-   "FELLOWS外伝 ―Believe―",
-   "AOMORIの赤い実",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
+   "FELLOWS SONIC 2026"
   ],
   "n": 13,
   "kin": [],
@@ -346,6 +318,29 @@
   "authored": true
  },
  {
+  "name": "イムラ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ハロウィン人狼（10月編）",
+   "シノの魂",
+   "ケヤグセカイ",
+   "ナカマセカイ",
+   "replica／get back",
+   "銀河鉄道の夜 赤",
+   "FELLOWS学園Z",
+   "怪獣",
+   "FELLOWS外伝 ―Believe―",
+   "AOMORIの赤い実",
+   "FELLOWS SONIC 2026"
+  ],
+  "n": 12,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "みの",
   "kind": "キャラ",
   "gen": "学園の生徒",
@@ -418,27 +413,6 @@
   "authored": true
  },
  {
-  "name": "きむら",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "FELLOWS貸切誕生！",
-   "ナカマセカイ",
-   "銀河鉄道の夜 赤",
-   "銀河鉄道の夜 青",
-   "なぞの四人目の男",
-   "怪獣",
-   "バタフライ・エフェクト",
-   "FELLOWS外伝 ―Believe―",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
-  ],
-  "n": 10,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "学園長しのぴ",
   "kind": "キャラ",
   "gen": "AI（学園長）",
@@ -462,6 +436,26 @@
    "ギャラガー"
   ],
   "authored": true
+ },
+ {
+  "name": "きむら",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "FELLOWS貸切誕生！",
+   "ナカマセカイ",
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "怪獣",
+   "バタフライ・エフェクト",
+   "FELLOWS外伝 ―Believe―",
+   "FELLOWS SONIC 2026"
+  ],
+  "n": 9,
+  "kin": [],
+  "authored": false
  },
  {
   "name": "まぐろ",
@@ -503,23 +497,6 @@
   "authored": false
  },
  {
-  "name": "さっちん",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "ハロウィン人狼（10月編）",
-   "ケヤグセカイ",
-   "FELLOWS学園Z",
-   "FELLOWS外伝 ―Believe―",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
-  ],
-  "n": 6,
-  "kin": [],
-  "authored": false
- },
- {
   "name": "たくや",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -531,23 +508,6 @@
    "NEVER！NEVER！NEVER！",
    "FELLOWS、ナメック星へ",
    "バレンタイン告白大作戦"
-  ],
-  "n": 6,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "ジョン",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "銀河鉄道の夜 赤",
-   "銀河鉄道の夜 青",
-   "なぞの四人目の男",
-   "バタフライ・エフェクト",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
   ],
   "n": 6,
   "kin": [],
@@ -623,6 +583,22 @@
   "n": 5,
   "kin": [],
   "authored": true
+ },
+ {
+  "name": "さっちん",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "ハロウィン人狼（10月編）",
+   "ケヤグセカイ",
+   "FELLOWS学園Z",
+   "FELLOWS外伝 ―Believe―",
+   "FELLOWS SONIC 2026"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": false
  },
  {
   "name": "なおき",
@@ -701,6 +677,22 @@
    "銀河鉄道の夜 青",
    "バタフライ・エフェクト",
    "AOMORIの赤い実"
+  ],
+  "n": 5,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "ジョン",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 赤",
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男",
+   "バタフライ・エフェクト",
+   "FELLOWS SONIC 2026"
   ],
   "n": 5,
   "kin": [],
@@ -811,36 +803,6 @@
    "ハロウィン人狼（10月編）",
    "シノの魂",
    "ナカマセカイ"
-  ],
-  "n": 4,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "もんた",
-  "kind": "本人",
-  "gen": "参加者",
-  "desc": "FELLOWSの参加者。『銀河鉄道の夜 赤』の主人公（“もんちゃん”）。",
-  "events": [
-   "replica／get back",
-   "銀河鉄道の夜 赤",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
-  ],
-  "n": 4,
-  "kin": [],
-  "authored": true
- },
- {
-  "name": "やまぴー",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "銀河鉄道の夜 赤",
-   "なぞの四人目の男",
-   "FELLOWS SONIC 2026",
-   "FELLOWS EXPO 2026 AOMORI"
   ],
   "n": 4,
   "kin": [],
@@ -966,14 +928,28 @@
   "authored": false
  },
  {
-  "name": "もっちー",
+  "name": "もんた",
+  "kind": "本人",
+  "gen": "参加者",
+  "desc": "FELLOWSの参加者。『銀河鉄道の夜 赤』の主人公（“もんちゃん”）。",
+  "events": [
+   "replica／get back",
+   "銀河鉄道の夜 赤",
+   "FELLOWS SONIC 2026"
+  ],
+  "n": 3,
+  "kin": [],
+  "authored": true
+ },
+ {
+  "name": "やまぴー",
   "kind": "本人",
   "gen": "本人",
   "desc": "",
   "events": [
-   "銀河鉄道の夜 青",
+   "銀河鉄道の夜 赤",
    "なぞの四人目の男",
-   "FELLOWS EXPO 2026 AOMORI"
+   "FELLOWS SONIC 2026"
   ],
   "n": 3,
   "kin": [],
@@ -1200,6 +1176,19 @@
   "authored": false
  },
  {
+  "name": "もっちー",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 青",
+   "なぞの四人目の男"
+  ],
+  "n": 2,
+  "kin": [],
+  "authored": false
+ },
+ {
   "name": "ガッツ石松",
   "kind": "キャラ",
   "gen": "作中キャラ",
@@ -1246,19 +1235,6 @@
   "events": [
    "ラストクリスマスの逆襲",
    "失われた天下一武狼会 第四回の記憶"
-  ],
-  "n": 2,
-  "kin": [],
-  "authored": false
- },
- {
-  "name": "レオ",
-  "kind": "本人",
-  "gen": "本人",
-  "desc": "",
-  "events": [
-   "銀河鉄道の夜 青",
-   "FELLOWS EXPO 2026 AOMORI"
   ],
   "n": 2,
   "kin": [],
@@ -2507,6 +2483,18 @@
   "desc": "",
   "events": [
    "FELLOWS学園Z"
+  ],
+  "n": 1,
+  "kin": [],
+  "authored": false
+ },
+ {
+  "name": "レオ",
+  "kind": "本人",
+  "gen": "本人",
+  "desc": "",
+  "events": [
+   "銀河鉄道の夜 青"
   ],
   "n": 1,
   "kin": [],
