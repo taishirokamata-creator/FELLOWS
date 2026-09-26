@@ -520,29 +520,50 @@ if ts:
             r["title"] + "\n" + r.get("desc","") + "\n\n⟵ [[天下一武狼会シリーズ]]\n"
         w(TFOLDER, r["title"], body)
 
-# ---------- 生成: HOME (MOC) ----------
-home = f"""---
+# ---------- 生成: カテゴリまとめページ（HOME からの入口。列挙はここに集約） ----------
+_all_char_nodes = sorted(set(CHARS.keys()) | {n for n in node_appears if n})
+_honnin = [n for n in _all_char_nodes if kind_of(n) == "本人"]
+_kyara  = [n for n in _all_char_nodes if kind_of(n) == "キャラ"]
+char_index = "---\ntype: キャラクター一覧\ntags: [キャラクター, まとめ, FELLOWS]\n---\n" + \
+    "# 👥 キャラクター名鑑\n\n" + \
+    "FELLOWSの登場人物一覧です。名前をクリックすると各ページへ。👤＝本人（実在プレイヤー／GM）、🎭＝作中キャラクター。\n\n" + \
+    f"## 👤 本人（{len(_honnin)}）\n" + "　".join(f"[[{sanitize(n)}]]" for n in _honnin) + "\n\n" + \
+    f"## 🎭 作中キャラクター（{len(_kyara)}）\n" + "　".join(f"[[{sanitize(n)}]]" for n in _kyara) + "\n\n" + \
+    "---\n🏠 [[00_HOME]]\n"
+w("キャラクター", "キャラクター名鑑", char_index)
+
+_world_names = [wdisp(wd["k"]) for wd in db["world"]]
+term_index = "---\ntype: 用語一覧\ntags: [用語集, まとめ, FELLOWS]\n---\n" + \
+    "# 📚 用語・設定一覧\n\n" + \
+    "世界観設定と特殊用語の一覧です。名前をクリックすると各ページへ。\n\n" + \
+    f"## 🌐 世界観・設定（{len(_world_names)}）\n" + "　".join(f"[[{sanitize(n)}]]" for n in _world_names) + "\n\n" + \
+    f"## 🔑 用語・キーワード（{len(kw_names)}）\n" + "　".join(f"[[{sanitize(n)}]]" for n in kw_names) + "\n\n" + \
+    "---\n🏠 [[00_HOME]]\n"
+w("用語集", "用語・設定一覧", term_index)
+
+# ---------- 生成: HOME (MOC。列挙せず、各カテゴリのまとめページへの入口にする) ----------
+home = """---
 type: MOC
 tags: [HOME, FELLOWS]
 ---
-# 🐺 FELLOWS貸切 / FELLOWS学園 — 資料金庫
+# 🐺 FELLOWS貸切 / FELLOWS学園 — 思い出共有Wiki
 
-人狼ルーム『FELLOWS貸切』のストーリー人狼と、近未来SF『FELLOWS学園』の設定データベース。
-このノートを起点に、公演・人物・世界観・年表が `[[リンク]]` で繋がっています（左のグラフビューで全体像が見えます）。
+『FELLOWS貸切』の公演・キャラクター・世界観をまとめた資料集です。
+各カテゴリの「まとめページ」から、気になる項目のページへたどれます。上の検索や、左上の「☰ 目次」からも探せます。
 
 ## 🗺 まず見る
-- [[作中年表]] — FELLOWS世界の人狼の作中年代（人狼ルーム→超未来）
-- [[現実の開催史]] — いつ何を上演したか
+- [[作中年表]] — FELLOWS世界の人狼を作中年代順に（各公演へ）
+- [[現実の開催史]] — いつ何を上演したかを開催日順に（各公演へ）
 
-## 📖 公演（作中年代順）
-""" + "\n".join(
- f"- [[{sanitize(SHORT[i])}]]" for i in STORY_ORDER if i in ev_by_id
-) + "\n\n## 👥 キャラクター（本人＝👤 ／ 作中キャラ＝🎭 で区分）\n" + "　".join(f"[[{sanitize(n)}]]" for n in CHARS) + \
-   f"\n\n> ほかの登場者も各公演の配役から自動でノート化。各ノート冒頭に 👤本人／🎭作中キャラ を表示（`tags:本人/キャラ`）。キャラクターノート総数 {len(CHARS)+minor_count}。" + \
-   "\n\n## 📚 用語集（世界観設定＋特殊キーワード）\n" + \
-   "　".join(f"[[{sanitize(wdisp(wd['k']))}]]" for wd in db["world"]) + "　" + \
-   "　".join(f"[[{sanitize(n)}]]" for n in kw_names) + \
-   "\n\n---\n*生成元：`年表/data/fellows_db.json`。追記はJSON→再生成、またはノートを直接編集。*\n"
+## 📚 カテゴリ（まとめ → 各ページ）
+- 📖 **公演** … [[作中年表]]（作中年代順）／[[現実の開催史]]（開催日順）
+- 🏆 **天下一武狼会** … [[天下一武狼会シリーズ]]
+- 👥 **キャラクター** … [[キャラクター名鑑]]（本人👤／作中キャラ🎭）
+- 📚 **用語・設定** … [[用語・設定一覧]]
+
+---
+*生成元：`年表/data/fellows_db.json`。修正・追記の歓迎については、トップの「このサイトについて」を参照。*
+"""
 with open(os.path.join(VAULT, "00_HOME.md"), "w", encoding="utf-8") as f:
     f.write(home)
 
